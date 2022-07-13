@@ -6,5 +6,5 @@ export const environment = {
   production: false
 };
 
-// ng build --base-href="https://matheuspcouto.github.io"
+// ng build --base-href="https://matheuspcouto.github.io/"
 // npx angular-cli-ghpages --dir=dist/matheuspcouto.github.io

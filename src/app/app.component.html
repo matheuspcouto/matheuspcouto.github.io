@@ -3,7 +3,7 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
   <div class="hero-container text-lg-center" data-aos="fade-in">
-    <h3><span class="typed" data-typed-items="Hello World !"></span></h3>
+    <h3><span class="typed" data-typed-items="Hello World !  "></span></h3>
     <h1>Welcome to my</h1>
     <h1>Portfolio.</h1>
   </div>
@@ -33,7 +33,7 @@
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>Digital Solutions Consultant | Fullstack Developer</h3>
           <p class="font-italic">
-            Currently working at Capgemini in the area of ​​fullstack development, using Java language.
+            Currently working at Capgemini in the area of fullstack development, using Java and Angular.
           </p>
           <div class="row">
             <div class="col-lg-6">
@@ -63,73 +63,14 @@
 
       <div class="row no-gutters">
 
-        <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div *ngFor="let sk of itensSkils" class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
           <div class="count-box">
-            <i class="bx bx-code-curly"></i>
-            <span class="section-title">Back-End</span>
-            <p><strong>Java</strong></p>
-            <p><strong>SpringBoot</strong></p>
-            <p><strong>JSF & JPA</strong></p>
-            <p><strong>C#</strong></p>
-            <p><strong>.Net Core</strong></p>
-            <p><strong>.Net Framework</strong></p>
-            <p><strong>Python</strong></p>
+            <i [class]="sk.icon"></i>
+            <span class="section-title">{{sk.title}}</span>
+            <p *ngFor="let item of sk.itens"><strong>{{item}}</strong></p>
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-          <div class="count-box">
-            <i class="bx bx-code-alt"></i>
-            <span class="section-title">Front-End</span>
-            <p><strong>HTML</strong></p>
-            <p><strong>CSS</strong></p>
-            <p><strong>Bootstrap</strong></p>
-            <p><strong>JavaScript</strong></p>
-            <p><strong>Angular</strong></p>
-            <p><strong>Node.js</strong></p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-          <div class="count-box">
-            <i class="bx bx-data"></i>
-            <span class="section-title">Databases</span>
-            <p><strong>PostgreSQL</strong></p>
-            <p><strong>SQL Server</strong></p>
-            <p><strong>MySQL</strong></p>
-            <p><strong>MongoDB</strong></p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="400">
-          <div class="count-box">
-            <i class="bx bxl-git"></i>
-            <span style="font-size: 40px;" class="section-title">DevOps</span>
-            <p><strong>Git</strong></p>
-            <p><strong>Jenkins</strong></p>
-            <p><strong>Bamboo</strong></p>
-            <p><strong>Docker</strong></p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-4 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="500">
-          <div class="count-box">
-            <i class="bx bx-wrench"></i>
-            <span class="section-title">Tools</span>
-            <p><strong>Jira Software</strong></p>
-            <p><strong>Trello</strong></p>
-            <p><strong>Postman</strong></p>
-            <p><strong>Confluence</strong></p>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="600">
-          <div class="count-box">
-            <i class="icofont-globe"></i>
-            <span class="section-title">Languages</span>
-            <p><strong>English - Intermediate</strong></p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -144,33 +85,18 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="icofont-database"></i></div>
-          <h4 class="title">SQL Complete | Softblue</h4>
-          <p class="description">Finished in: June - 2019</p>
-        </div>
-        <div class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="icofont-computer"></i></div>
-          <h4 class="title">Programming Logic | Softblue</h4>
-          <p class="description">Finished in: November - 2020</p>
-        </div>
-        <div class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="icofont-file-javascript"></i></div>
-          <h4 class="title">Angular Academy | Impacta</h4>
-          <p class="description">Finished in: November - 2021</p>
-        </div>
-        <div class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="icofont-google-talk"></i></div>
-          <h4 class="title">Intermediate English | Education First</h4>
-          <p class="description">Finished in: May - 2022</p>
+        <div *ngFor="let cert of certifications" class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
+          <div class="icon"><i [class]="cert.icon"></i></div>
+          <h4 class="title">{{cert.title}}</h4>
+          <p class="description">Finished in: {{cert.finishedDate}}</p>
         </div>
       </div>
     </div>
   </section>
   <!-- End Certificações Section -->
 
-  <!-- ======= Publicaçoes Section ======= -->
-  <section id="services" class="services">
+  <!-- ======= Articles Section ======= -->
+  <section id="services" class="services section-bg">
     <div class="container">
 
       <div class="section-title">
@@ -178,13 +104,12 @@
       </div>
 
       <div class="row">
-        <div class="col-lg-12 col-md-6 icon-box" data-aos="fade-up">
+        <div *ngFor="let art of articles" class="col-lg-12 col-md-6 icon-box" data-aos="fade-up">
           <div class="icon"><i class="icofont-book"></i></div>
-          <h4 class="title">Ergonomic Assessment of Avodah Scale Management System Interface Quality: a Project-Based
-            Learning Case Study</h4>
-          <p class="description">International Journal of Development Research - IJDR | December - 2021</p>
-          <p class="description">ISSN: 2230-9926</p>
-          <a href="https://www.journalijdr.com/sites/default/files/issue-pdf/23530_0.pdf" target="_blank">
+          <h4 class="title">{{art.title}}</h4>
+          <p class="description">{{art.journal + ' | ' + art.publishedDate}}</p>
+          <p class="description">{{art.issn}}</p>
+          <a [href]="art.url" target="_blank">
             <p class="description">See more ></p>
           </a>
         </div>
@@ -192,7 +117,7 @@
 
     </div>
   </section>
-  <!-- End Certificações Section -->
+  <!-- End Articles Section -->
 
   <!-- ======= Experiencia e Formação Section ======= -->
   <section id="resume" class="resume">
@@ -202,7 +127,6 @@
         <h2>My Career</h2>
       </div>
 
-      <!-- Formação Section -->
       <div class="row">
         <div class="col-lg-6" data-aos="fade-up">
           <h3 class="resume-title">Academic Formation</h3>
@@ -216,32 +140,12 @@
 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Internship</h4>
-            <h5>2019 - 2021</h5>
-            <p><em>Secretaria de Desenvolvimento Econômico e Emprego - SEDEM</em></p>
+          <div class="resume-item" *ngFor="let job of jobs">
+            <h4>{{job.title}}</h4>
+            <h5>{{job.period}}</h5>
+            <p><em>{{job.company}}</em></p>
             <ul>
-              <li>Hardware and Software Support</li>
-              <li>Reports</li>
-              <li>Administration of Permits for Companies</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Java Developer</h4>
-            <h5>March, 2021 - October, 2021</h5>
-            <p><em>Eco Açú Tecnologia</em></p>
-            <ul>
-              <li>Development and Maintenance of Public Administration Systems</li>
-              <li>Database Administration and Import</li>
-              <li>Reports on Jasper Reports</li>
-            </ul>
-          </div>
-          <div class="resume-item">
-            <h4>Digital Solutions Consultant & Fullstack Developer</h4>
-            <h5>November, 2021 - Currently</h5>
-            <p><em>Capgemini Brazil S/A</em></p>
-            <ul>
-              <li>Development and Maintenance of Banking Service System.</li>
+              <li *ngFor="let act of job.activities">{{act}}</li>
             </ul>
           </div>
         </div>
@@ -259,210 +163,33 @@
       </div>
 
       <div class="container">
-        <!-- Escalas Metodista-->
-        <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-5">
-            <a href="https://github.com/matheuspcouto/AVODAH" target="_blank">
-              <img class="img-fluid rounded" src="assets/img/portfolio/Avodah White.png" alt="..." /></a>
-          </div>
-          <div class="col-lg-6">
-            <div class="bg-black text-center h-100 project">
-              <div class="d-flex h-100">
-                <div class="project-text w-100 my-auto text-center text-lg-right"><br>
-                  <h4 class="text-black text-lg-center">Avodah</h4>
-                  <p class="mb-0 text-black-50 text-lg-center">Management system and generation of
-                    dynamic scales. Project carried out as Completion Work of Information
-                    Systems Course directed to the Methodist Church in Palmas.</p>
-                  <p class="mb-0 text-black-50 text-lg-center">- Developed in C#.</p>
-                  <hr class="d-none d-lg-block mb-0 ml-0" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <!-- INFO STORE-->
-          <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+          <div *ngFor="let project of projects" class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="col-lg-5">
-              <a href="https://github.com/matheuspcouto/INFO-STORE" target="_blank">
-                <img class="img-fluid rounded-circle" src="assets/img/portfolio/info.png" alt="..." /></a>
+              <a [href]="project.url" target="_blank">
+                <img class="img-fluid rounded-circle" [src]="project.image" alt="..." /></a>
             </div>
             <div class="col-lg-6 order-lg-first">
               <div class="bg-black text-center h-100 project">
                 <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-black text-lg-center">Info Store</h4>
-                    <p class="mb-0 text-black-50 text-lg-center">Inventory Control System of a
-                      computer store. Project carried out in the subject of Topics in
-                      Programming 3 during the 5th period.</p>
-                    <p class="mb-0 text-black-50 text-lg-center">- Developed in C#.</p>
-                    <hr class="d-none d-lg-block mb-5 mr-0" />
+                  <div [class]="'project-text w-100 my-auto text-center text-lg-' + project.position">
+                    <h4 class="text-black text-lg-center">{{project.title}}</h4>
+                    <p class="mb-0 text-black-50 text-lg-center">{{project.description}}</p>
+                    <p class="mb-0 text-black-50 text-lg-center">{{project.tecnology}}</p>
+                    <hr class="d-none d-lg-block mb-5 mr-0"/>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container">
-          <!-- Project Irrigação-->
-          <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="col-lg-5">
-              <a href="https://github.com/matheuspcouto/Projeto-Irrigacao" target="_blank">
-                <img class="img-fluid" src="assets/img/portfolio/irriot.jfif" alt="..." /></a>
-            </div>
-            <div class="col-lg-6">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-right">
-                    <h4 class="text-black text-lg-center">IrrIot - Intelligent Irrigation System
-                    </h4>
-                    <p class="mb-0 text-black-50 text-lg-center">Interaction project with
-                      Arduino and Java Web platform to monitor data and control the irrigation
-                      system in a cost-effective and accurate way.</p>
-                    <p class="mb-0 text-black-50 text-lg-center">- Developed in Java.</p>
-                    <hr class="d-none d-lg-block mb-0 ml-0" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <!-- Form App Script-->
-          <div class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-5">
-              <a href="https://github.com/matheuspcouto/Form_Inscricoes_Google_App_Script" target="_blank">
-                <img class="img-fluid rounded-circle" src="assets/img/portfolio/script.png" alt="..." /></a>
-            </div>
-            <div class="col-lg-6 order-lg-first">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-left"><br>
-                    <h4 class="text-black text-lg-center">Application form - App Script</h4>
-                    <p class="mb-0 text-black-50 text-lg-center">Church service registration web
-                      form linked to a Google Drive spreadsheet using App Script through
-                      JavaScript language for implementation and provides the form as a link
-                      on the web.</p>
-                    <p class="mb-0 text-black-50 text-lg-center">- Desenvolvido em JavaScript.
-                    </p>
-                    <hr class="d-none d-lg-block mb-5 mr-0" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
   </section>
   <!-- End Portfolio Section -->
 
-  <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Contact</h2>
-      </div>
-
-      <div class="row" data-aos="fade-in">
-
-        <div class="col-lg-4 d-flex align-items-stretch">
-          <div class="info">
-
-            <div class="email">
-              <i class="icofont-envelope"></i>
-              <h4>E-mail:</h4>
-              <p>matheuspcouto70@gmail.com</p>
-            </div>
-
-            <div class="phone">
-              <i class="icofont-phone"></i>
-              <h4>Phone Number:</h4>
-              <p>+55 (63) 9 9201 - 4337</p>
-
-            </div>
-            <div class="phone">
-              <i class="bx bxl-github"></i>
-              <h4>Github:</h4>
-              <p>matheuspcouto</p>
-
-            </div>
-            <div class="phone">
-              <i class="bx bxl-linkedin"></i>
-              <h4>Linkedin:</h4>
-              <p>in/matheuspcouto</p>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 mt-5 mt-lg-0">
-          <form role="form" class="php-email-form">
-            <div class="row">
-              <div class="col-md-6 form-group mt-3"> <input type="text" class="form-control" name="email" id="email"
-                  placeholder="Your Email" required=""></div>
-            </div>
-            <div class="form-group mt-3"> <input type="text" class="form-control" name="subject" id="subject"
-                placeholder="Subject" required=""></div>
-            <div class="form-group mt-3"><textarea class="form-control" name="message" rows="5" placeholder="Message"
-                required="" id="message"></textarea></div>
-            <button onclick="sendMail();" class="btn btn-primary" type="button">Send</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Contato Section -->
 </main>
 <!-- End #main -->
 
-<!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="container profile">
-    <div class="social-links mt-3 text-center">
-      <a href="https://github.com/matheuspcouto" target="_blank" class="Github"><i class="bx bxl-github"></i></a>
-      <a href="https://www.linkedin.com/in/matheuspcouto/" target="_blank" class="Linkedin"><i
-          class="bx bxl-linkedin"></i></a>
-      <a href="https://api.whatsapp.com/send?phone=5563992014337" target="_blank" class="Whatsapp"><i
-          class="bx bxl-whatsapp"></i></a>
-      <a href="https://t.me/MatheusPcouto" target="_blank" class="Telegram"><i class="bx bxl-telegram"></i></a>
-    </div> <br>
-    <div class="copyright">
-      <span>Copyright &copy; 2022 &mdash; Developed by Matheus Pimentel Do Couto</span>
-    </div>
-  </div>
-</footer>
-<!-- End  Footer -->
+<app-footer></app-footer>
 
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-<!-- Vendor JS Files -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/counterup/counterup.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/typed.js/typed.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
-
-<!-- Enviar E-mail-->
-<script>
-  function sendMail() {
-    var link = "mailto:matheuspcouto70@gmail.com"
-      + "?cc=" + escape(document.getElementById('email').value)
-      + "&subject=" + escape(document.getElementById('subject').value)
-      + "&body=" + escape(document.getElementById('message').value)
-      ;
-
-    window.location.href = link;
-
-    alert("E-mail enviado com sucesso!");
-  }
-</script>

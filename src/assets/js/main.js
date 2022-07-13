@@ -4,7 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-!(function($) {
+jQuery(function($) {
   "use strict";
 
   // Hero typed
@@ -48,7 +48,7 @@
   });
 
   // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function() {
+  $(document).on('ready', function() {
     if (window.location.hash) {
       var initial_nav = window.location.hash;
       if ($(initial_nav).length) {
@@ -65,7 +65,7 @@
     $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
   });
 
-  $(document).click(function(e) {
+  $(document).on('ready', function(e) {
     var container = $(".mobile-nav-toggle");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($('body').hasClass('mobile-nav-active')) {
@@ -99,7 +99,7 @@
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).on('scroll', function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
@@ -107,7 +107,7 @@
     }
   });
 
-  $('.back-to-top').click(function() {
+  $('.back-to-top').on('click', function() {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -147,7 +147,7 @@
     });
 
     // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
+    $(document).on('ready', function() {
       $('.venobox').venobox();
     });
   });
