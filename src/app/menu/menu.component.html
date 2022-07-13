@@ -1,0 +1,31 @@
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+<header id="header">
+  <div class="d-flex flex-column">
+    <nav class="nav-menu">
+      <ul *ngFor="let item of itensMenu">
+        <li [class]="item.isActive ? 'active' : ''"><a [href]="item.route"><i [class]="item.icon"></i>
+            <span>{{item.title}}</span></a></li>
+      </ul>
+      <ul>
+        <li>
+          <div class="dropdown">
+            <a class=" dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class='bx bxs-spreadsheet'></i>
+              Resume
+            </a>
+            <div style="width: 100%" class="dropdown-menu">
+              <a class="dropItem dropdown-item" target="_blank"
+                href="https://docs.google.com/presentation/d/1M4eXA-bAfEEBYqDDCBMRyE_zmxdPvclmYW4BZYQWL5s/preview">PT-BR</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropItem dropdown-item" target="_blank"
+                href="https://docs.google.com/presentation/d/1aiPFP_pHmb3UmcMTxIp74TDmHOn-E3bEgWB7Ugy3Cow/preview">EN-US</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  </div>
+</header>
