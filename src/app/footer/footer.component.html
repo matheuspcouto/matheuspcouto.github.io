@@ -22,13 +22,15 @@
       <div class="col-lg-8 mt-5 mt-lg-0">
         <form role="form" class="php-email-form">
           <div class="row">
-            <div class="col-md-6 form-group mt-3"> <input type="text" class="form-control" name="email" id="email"
-                placeholder="Your Email" required=""></div>
+            <div class="col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="email" id="email" placeholder="Your Email"
+                [(ngModel)]="email">
+            </div>
           </div>
           <div class="form-group mt-3"> <input type="text" class="form-control" name="subject" id="subject"
-              placeholder="Subject" required=""></div>
+              placeholder="Subject" [(ngModel)]="subject"></div>
           <div class="form-group mt-3"><textarea class="form-control" name="message" rows="5" placeholder="Message"
-              required="" id="message"></textarea></div>
+              [(ngModel)]="message" id="message"></textarea></div>
           <button (click)="enviarEmail()" class="btn btn-primary" type="button">Send</button>
         </form>
       </div>

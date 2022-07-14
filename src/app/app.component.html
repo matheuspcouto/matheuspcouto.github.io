@@ -167,15 +167,15 @@
 
         <div class="card-deck">
           <div class="card" *ngFor="let project of projects">
-            <a [href]="project.url" target="_blank"><img class="card-img-top" [src]="project.image"
-                alt="Card image cap"></a>
+            <img class="card-img-top" [src]="project.image"
+              alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{project.title}}</h5>
               <p class="card-text">{{project.description}}</p>
             </div>
             <div class="card-footer">
               <div class="social-links mt-2 text-center">
-                <span *ngFor="let icon of project.tecnologies"><i [class]="icon"></i></span>
+                <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
               </div>
             </div>
           </div>

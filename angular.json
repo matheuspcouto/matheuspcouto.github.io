@@ -33,6 +33,7 @@
               "src/assets/vendor/venobox/venobox.css",
               "src/assets/vendor/owl.carousel/assets/owl.carousel.min.css",
               "src/assets/vendor/aos/aos.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": [

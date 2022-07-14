@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-footer',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   socials: any[] =[];
+  email: any;
+  subject: any;
+  message: any;
 
-  constructor() { }
+  constructor(private toastr: ToastrService) {}
 
   ngOnInit(): void {
     this.getSocials();
@@ -45,7 +49,14 @@ export class FooterComponent implements OnInit {
   }
 
   enviarEmail(){
+    var link = "mailto:matheuspcouto70@gmail.com"
+               + "?cc=" + this.email
+               + "&subject=" + this.subject
+               + "&body=" + this.message;
 
+     window.location.href = link;
+
+     this.toastr.success("E-mail enviado com sucesso !");
   }
 
 }

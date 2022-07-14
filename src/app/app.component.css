@@ -444,10 +444,17 @@ section {
 }
 
 .card {
-  border-radius: 5px solid !important;
+  border-radius: 10px solid !important;
+  border-top: 5px solid #212431;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.social-links span {
+.card-img-top{
+  background-color: #F7F7F7;
+  height: 300px;
+}
+
+.social-links a {
   font-size: 18px;
   display: inline-block;
   background: #212431;
@@ -462,7 +469,7 @@ section {
   transition: 0.3s;
 }
 
-.social-links span:hover {
+.social-links a:hover {
   background: #149ddd;
   color: #fff;
   text-decoration: none;
