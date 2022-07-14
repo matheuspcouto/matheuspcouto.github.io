@@ -38,8 +38,8 @@ jQuery(function($) {
           $(this).closest('li').addClass('active');
         }
 
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
+        if ($('header').hasClass('mobile-nav-active')) {
+          $('header').removeClass('mobile-nav-active');
           $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
         }
         return false;
@@ -61,15 +61,15 @@ jQuery(function($) {
   });
 
   $(document).on('click', '.mobile-nav-toggle', function(e) {
-    $('body').toggleClass('mobile-nav-active');
+    $('header').toggleClass('mobile-nav-active');
     $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
   });
 
   $(document).on('ready', function(e) {
     var container = $(".mobile-nav-toggle");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
-      if ($('body').hasClass('mobile-nav-active')) {
-        $('body').removeClass('mobile-nav-active');
+      if ($('header').hasClass('mobile-nav-active')) {
+        $('header').removeClass('mobile-nav-active');
         $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
       }
     }
