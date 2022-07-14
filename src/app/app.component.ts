@@ -29,26 +29,26 @@ export class AppComponent implements OnInit {
       {
         title: 'Avodah Scales',
         description: 'Management system and generation of dynamic scales. Project carried out as Completion Work of Information Systems Course directed to the Methodist Church in Palmas.',
-        tecnology: '- Developed in C#.',
+        tecnologies: ['bx bxl-microsoft'],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/portfolio/Avodah White.png',
-        position: 'right'
+        class: 'project-text w-100 my-auto text-center text-lg-right'
       },
       {
         title: 'Info Store',
         description: 'Inventory Control System of a computer store. Project carried out in the subject of Topics in Programming 3 during the 5th period.',
-        tecnology: '- Developed in C#.',
+        tecnologies: ['bx bxl-microsoft'],
         url: 'https://github.com/matheuspcouto/INFO-STORE',
         image: 'assets/img/portfolio/info.png',
-        position: 'left'
+        class: 'project-text w-100 my-auto text-center text-lg-left'
       },
       {
         title: 'IrrIot - Intelligent Irrigation System',
         description: 'Interaction project with Arduino and Java Web platform to monitor data and control the irrigation system in a cost-effective and accurate way.',
-        tecnology: '- Developed in Java.',
+        tecnologies: ['bx bx-java', 'bx bxl-css3', 'bx bxl-html5'],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
         image: 'assets/img/portfolio/irriot.jfif',
-        position: 'right'
+        class: 'project-text w-100 my-auto text-center text-lg-right'
       },
     ]
   }
@@ -124,8 +124,7 @@ export class AppComponent implements OnInit {
     ];
 
     let itensFrontEnd = [
-      '> HTML',
-      '> CSS',
+      '> HTML & CSS',
       '> Bootstrap',
       '> TypeScript',
       '> JavaScript',
@@ -141,10 +140,9 @@ export class AppComponent implements OnInit {
     ];
 
     let itensDevOps = [
-      '> Git | StarTeam',
+      '> Git',
       '> Jenkins | Bamboo',
       '> Docker',
-      '> AWS (API Gateway | Lambda Functions)',
     ];
 
     let itensTest = ['> JUnit', '> Jest', '> Mockito', '> Postman'];

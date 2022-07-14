@@ -63,7 +63,8 @@
 
       <div class="row no-gutters">
 
-        <div *ngFor="let sk of itensSkils" class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div *ngFor="let sk of itensSkils" class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
+          data-aos-delay="100">
           <div class="count-box">
             <i [class]="sk.icon"></i>
             <span class="section-title">{{sk.title}}</span>
@@ -163,27 +164,24 @@
       </div>
 
       <div class="container">
-          <div *ngFor="let project of projects" class="row justify-content-center no-gutters mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-lg-5">
-              <a [href]="project.url" target="_blank">
-                <img class="img-fluid rounded-circle" [src]="project.image" alt="..." /></a>
+
+        <div class="card-deck">
+          <div class="card" *ngFor="let project of projects">
+            <a [href]="project.url" target="_blank"><img class="card-img-top" [src]="project.image"
+                alt="Card image cap"></a>
+            <div class="card-body">
+              <h5 class="card-title">{{project.title}}</h5>
+              <p class="card-text">{{project.description}}</p>
             </div>
-            <div class="col-lg-6 order-lg-first">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div [class]="'project-text w-100 my-auto text-center text-lg-' + project.position">
-                    <h4 class="text-black text-lg-center">{{project.title}}</h4>
-                    <p class="mb-0 text-black-50 text-lg-center">{{project.description}}</p>
-                    <p class="mb-0 text-black-50 text-lg-center">{{project.tecnology}}</p>
-                    <hr class="d-none d-lg-block mb-5 mr-0"/>
-                  </div>
-                </div>
+            <div class="card-footer">
+              <div class="social-links mt-2 text-center">
+                <span *ngFor="let icon of project.tecnologies"><i [class]="icon"></i></span>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
-
   </section>
   <!-- End Portfolio Section -->
 
