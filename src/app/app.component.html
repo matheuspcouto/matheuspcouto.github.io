@@ -3,9 +3,9 @@
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
   <div class="hero-container text-lg-center" data-aos="fade-in">
-    <h3><span class="typed" data-typed-items="Hello World !  "></span></h3>
-    <h1>Welcome to my</h1>
-    <h1>Portfolio.</h1>
+    <h3><span class="typed" data-typed-items="Hello World ! "></span></h3>
+    <h1>Bem vindo(a) ao</h1>
+    <h1>meu Portfólio.</h1>
   </div>
 </section>
 <!-- End Hero -->
@@ -16,13 +16,10 @@
   <section id="about" class="about">
     <div class="container">
       <div class="section-title">
-        <h2>About</h2>
-        <p>Graduated in Information Systems. I am very communicative, creative, organized and easy to live
-          with,
-          I have the ability to learn, I am a Christian and youth cell leader,
-          always looking for improvement and expansion of knowledge. I have skills with Fullstack
-          Development,
-          Programming Logic, SQL Transactions, Problem Solving and Intermediate English.
+        <h2>Sobre</h2>
+        <p>Graduado em Sistemas de Informação. Sou muito comunicativo, criativo, organizado e de fácil convivência, tenho capacidade de aprendizado,
+          sou líder de célula cristã de jovens, e sempre estou em busca de aprimoramento e ampliação de conhecimento. Possuo habilidades com Desenvolvimento Fullstack,
+          Lógica de Programação, Transações SQL, Resolução de Problemas e Inglês Intermediário.
         </p>
       </div>
 
@@ -31,20 +28,18 @@
           <img src="assets/img/perfil2.jpg" class="img-fluid rounded-lg" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Digital Solutions Consultant | Fullstack Developer</h3>
+          <h3>Consultor de Soluções Digitais | Desenvolvedor Fullstack Pleno</h3>
           <p class="font-italic">
-            Currently working at Capgemini in the area of fullstack development, using Java and Angular.
+            Atualmente trabalhando na Capgemini atuando como desenvolvedor fullstack, utilizando Java e Angular.
           </p>
           <div class="row">
             <div class="col-lg-6">
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Birth Date:</strong> May 23, 2000
+                <li><i class="icofont-rounded-right"></i> <strong>Data de Nascimento:</strong> 23/05/2000
                 </li>
-                <li><i class="icofont-rounded-right"></i> <strong>Living in:</strong> Palmas,
-                  Tocantins, Brazil</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 22</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Born in:</strong> Belém, Pará,
-                  Brazil</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Morando em:</strong> Palmas - Tocantins</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Idade:</strong> {{age}}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Nascido em:</strong> Belém - Pará</li>
               </ul>
             </div>
           </div>
@@ -58,7 +53,7 @@
   <section id="facts" class="facts section-bg">
     <div class="container">
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2>Habilidades</h2>
       </div>
 
       <div class="row no-gutters">
@@ -82,7 +77,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Certifications</h2>
+        <h2>Certificações</h2>
       </div>
 
       <div class="row">
@@ -101,7 +96,7 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>Published Articles</h2>
+        <h2>Artigos Publicados</h2>
       </div>
 
       <div class="row">
@@ -111,7 +106,7 @@
           <p class="description">{{art.journal + ' | ' + art.publishedDate}}</p>
           <p class="description">{{art.issn}}</p>
           <a [href]="art.url" target="_blank">
-            <p class="description">See more ></p>
+            <p class="description">Ver mais ></p>
           </a>
         </div>
       </div>
@@ -125,22 +120,22 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>My Career</h2>
+        <h2>Minha Carreira</h2>
       </div>
 
       <div class="row">
         <div class="col-lg-6" data-aos="fade-up">
-          <h3 class="resume-title">Academic Formation</h3>
+          <h3 class="resume-title">Formação Acadêmica</h3>
           <div class="resume-item">
-            <h4>Bachelor of Information Systems</h4>
+            <h4>Bacharelado em Sistemas de Informação</h4>
             <p><em>Universidade Estadual do Tocantins - UNITINS</em></p>
-            <p>Palmas, Tocantins, Brazil.</p>
+            <p>Palmas - Tocantins</p>
             <h5>2018 - 2021</h5>
           </div>
         </div>
 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Professional Experience</h3>
+          <h3 class="resume-title">Experiência Profissional</h3>
           <div class="resume-item" *ngFor="let job of jobs">
             <h4>{{job.title}}</h4>
             <h5>{{job.period}}</h5>
@@ -160,13 +155,13 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>My Projects</h2>
+        <h2>Meus Projetos</h2>
       </div>
 
       <div class="container">
 
         <div class="card-deck">
-          <div class="card" *ngFor="let project of projects">
+          <div class="card" *ngFor="let project of projects" data-aos="fade-up" data-aos-delay="100">
             <img class="card-img-top" [src]="project.image"
               alt="Card image cap">
             <div class="card-body">

@@ -12,6 +12,7 @@ export class FooterComponent implements OnInit {
   email: any;
   subject: any;
   message: any;
+  year: number = new Date().getFullYear();
 
   constructor(private toastr: ToastrService) {}
 
@@ -28,8 +29,8 @@ export class FooterComponent implements OnInit {
         icon: 'icofont-envelope'
       },
       {
-        title: 'Phone Number',
-        value: '+55 (63) 9 9201 - 4337',
+        title: 'Telefone',
+        value: '(63) 9 9201 - 4337',
         class: 'phone',
         icon: 'icofont-phone'
       },

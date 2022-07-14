@@ -3,7 +3,7 @@
   <div class="container">
 
     <div class="section-title">
-      <h2>Contact</h2>
+      <h2>Contato</h2>
     </div>
 
     <div class="row" data-aos="fade-in">
@@ -23,15 +23,15 @@
         <form role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-6 form-group mt-3">
-              <input type="text" class="form-control" name="email" id="email" placeholder="Your Email"
+              <input type="text" class="form-control" name="email" id="email" placeholder="Seu e-mail"
                 [(ngModel)]="email">
             </div>
           </div>
-          <div class="form-group mt-3"> <input type="text" class="form-control" name="subject" id="subject"
-              placeholder="Subject" [(ngModel)]="subject"></div>
-          <div class="form-group mt-3"><textarea class="form-control" name="message" rows="5" placeholder="Message"
+          <div class="form-group mt-3"> <input type="text" class="form-control" name="Assunto" id="subject"
+              placeholder="Assunto" [(ngModel)]="subject"></div>
+          <div class="form-group mt-3"><textarea class="form-control" name="message" rows="5" placeholder="Mensagem"
               [(ngModel)]="message" id="message"></textarea></div>
-          <button (click)="enviarEmail()" class="btn btn-primary" type="button">Send</button>
+          <button (click)="enviarEmail()" class="btn btn-primary" type="button">Enviar</button>
         </form>
       </div>
     </div>
@@ -50,7 +50,7 @@
       <a href="https://t.me/MatheusPcouto" target="_blank" class="Telegram"><i class="bx bxl-telegram"></i></a>
     </div> <br>
     <div class="copyright">
-      <span>Developed by Matheus Pimentel Do Couto - 2022</span>
+      <span>Desenvolvido em Angular por Matheus Pimentel Do Couto - {{year}}</span>
     </div>
   </div>
 </footer>

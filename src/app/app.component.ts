@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   articles: any[] = [];
   jobs: any[] = [];
   projects: any[] = [];
+  age: any;
 
   constructor() {}
 
@@ -22,13 +23,18 @@ export class AppComponent implements OnInit {
     this.getArticles();
     this.getCareer();
     this.getProjects();
+
+    let dataAniversario = new Date('2000-05-23');
+    let now = new Date();
+
+    this.age = now.getFullYear() - dataAniversario.getFullYear();
   }
 
   getProjects(){
     this.projects = [
       {
-        title: 'Avodah Scales',
-        description: 'Management system and generation of dynamic scales. Project carried out as Completion Work of Information Systems Course directed to the Methodist Church in Palmas.',
+        title: 'Avodah Escalas',
+        description: 'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como Trabalho de Conclusão de Curso de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
         tecnologies: ['bx bxl-microsoft'],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/portfolio/Avodah White.png',
@@ -36,15 +42,15 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Info Store',
-        description: 'Inventory Control System of a computer store. Project carried out in the subject of Topics in Programming 3 during the 5th period.',
+        description: 'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
         tecnologies: ['bx bxl-microsoft'],
         url: 'https://github.com/matheuspcouto/INFO-STORE',
         image: 'assets/img/portfolio/info.png',
         class: 'project-text w-100 my-auto text-center text-lg-left'
       },
       {
-        title: 'IrrIot - Intelligent Irrigation System',
-        description: 'Interaction project with Arduino and Java Web platform to monitor data and control the irrigation system in a cost-effective and accurate way.',
+        title: 'IrrIot - Sistema de Irrigação Inteligente',
+        description: 'Projeto de interação com Arduino e plataforma Java Web para monitorar dados e controlar o sistema de irrigação de forma econômica e precisa.',
         tecnologies: ['bx bx-java', 'bx bxl-css3', 'bx bxl-html5'],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
         image: 'assets/img/portfolio/irriot.jfif',
@@ -57,22 +63,22 @@ export class AppComponent implements OnInit {
 
     this.jobs = [
       {
-        title: 'Intership',
+        title: 'Estágio',
         period: '2019 - 2021',
         company: 'Secretaria de Desenvolvimento Econômico e Emprego - SEDEM',
-        activities: ['Hardware and Software Support', 'Reports', 'Administration of Permits for Companies']
+        activities: ['Suporte de Hardware e Software', 'Relatórios', 'Administração de Alvarás para Empresas']
       },
       {
-        title: 'Java Developer',
-        period: 'March, 2021 - October, 2021',
+        title: 'Desenvolvedor Java Júnior',
+        period: 'Março, 2021 - Outubro, 2021',
         company: 'Eco Açú Tecnologia',
-        activities: ['Development and Maintenance of Public Administration Systems', 'Database Administration and Import', 'Reports on Jasper Reports']
+        activities: ['Desenvolvimento e Manutenção de Sistemas de Administração Pública', 'Gestão e Importação de Banco de Dados', 'Relatórios em Jasper']
       },
       {
-        title: 'Digital Solutions Consultant & Fullstack Developer',
-        period: 'November, 2021 - Currently',
-        company: 'Capgemini Brazil S/A',
-        activities: ['Development and Maintenance of Banking Service System.']
+        title: 'Consultor de Soluções Digitais & Desenvolvedor Fullstack Pleno',
+        period: 'Novembro, 2021 - Atualmente',
+        company: 'Capgemini Brasil S/A',
+        activities: ['Desenvolvimento e Manutenção de Sistemas Bradesco']
       },
     ]
   }
@@ -81,7 +87,7 @@ export class AppComponent implements OnInit {
     this.articles = [
       {
         title: 'Ergonomic Assessment of Avodah Scale Management System Interface Quality: a Project-Based Learning Case Study',
-        publishedDate: 'December - 2021',
+        publishedDate: 'Dezembro - 2021',
         journal: 'International Journal of Development Research - IJDR',
         url: 'https://www.journalijdr.com/sites/default/files/issue-pdf/23530_0.pdf',
         issn: 'ISSN: 2230-9926'
@@ -92,24 +98,24 @@ export class AppComponent implements OnInit {
   getCertifications() {
     this.certifications = [
       {
-        title: 'SQL Complete | Softblue',
+        title: 'SQL Completo | Softblue',
         icon: 'icofont-database',
-        finishedDate: 'June - 2019',
+        finishedDate: 'Junho - 2019',
       },
       {
-        title: 'Programming Logic | Softblue',
+        title: 'Lógica de Programação | Softblue',
         icon: 'icofont-computer',
-        finishedDate: 'November - 2020',
+        finishedDate: 'Novembro - 2020',
       },
       {
-        title: 'Angular Academy | Impacta',
+        title: 'Academia Angular | Impacta',
         icon: 'icofont-file-javascript',
-        finishedDate: 'November - 2021',
+        finishedDate: 'Novembro - 2021',
       },
       {
-        title: 'Intermediate English | Education First',
+        title: 'Inglês Intermediário| Education First',
         icon: 'icofont-google-talk',
-        finishedDate: 'May - 2022',
+        finishedDate: 'Maio - 2022',
       },
     ];
   }
@@ -159,7 +165,7 @@ export class AppComponent implements OnInit {
         itens: itensFrontEnd,
       },
       {
-        title: 'Databases',
+        title: 'Banco de Dados',
         icon: 'bx bx-data',
         itens: itensDatabase,
       },
@@ -169,14 +175,14 @@ export class AppComponent implements OnInit {
         itens: itensDevOps,
       },
       {
-        title: 'Tests',
+        title: 'Testes',
         icon: 'bx bx-wrench',
         itens: itensTest,
       },
       {
-        title: 'Languages',
+        title: 'Idiomas',
         icon: 'icofont-globe',
-        itens: ['English - Intermediate'],
+        itens: ['Inglês - Intermediário'],
       },
     ];
   }
