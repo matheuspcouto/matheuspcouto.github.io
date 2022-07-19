@@ -37,16 +37,24 @@ export class AppComponent implements OnInit {
         description: 'Projeto desenvolvido em Angular para administrar a lista de presentes do casal, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
         tecnologies: ['bx bx-javascript','bx bx-angular', 'bx bxl-css3', 'bx bxl-html5'],
         url: 'https://matheuspcouto.github.io/Lista-Presentes-T-J/',
-        image: 'assets/img/portfolio/form-cha.png',
+        image: 'assets/img/portfolio/form-cha.jpg',
         class: 'project-text w-100 my-auto text-center text-lg-right'
       },
       {
         title: 'Avodah Escalas',
-        description: 'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como Trabalho de Conclusão de Curso de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
+        description: 'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como TCC de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
         tecnologies: ['bx bxl-microsoft'],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/portfolio/Avodah White.png',
         class: 'project-text w-100 my-auto text-center text-lg-right'
+      },
+      {
+        title: 'Info Store',
+        description: 'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
+        tecnologies: ['bx bxl-microsoft'],
+        url: 'https://github.com/matheuspcouto/INFO-STORE',
+        image: 'assets/img/portfolio/info.png',
+        class: 'project-text w-100 my-auto text-center text-lg-left'
       },
       {
         title: 'IrrIot - Sistema de Irrigação Inteligente',
