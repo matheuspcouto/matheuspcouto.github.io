@@ -160,56 +160,56 @@ section {
 
 
 /*--------------------------------------------------------------
-# About
+# sobre
 --------------------------------------------------------------*/
 
-.about .content h3 {
+.sobre .content h3 {
   font-weight: 700;
   font-size: 26px;
   color: #173b6c;
 }
 
-.about .content ul {
+.sobre .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+.sobre .content ul li {
   padding-bottom: 10px;
 }
 
-.about .content ul i {
+.sobre .content ul i {
   font-size: 20px;
   padding-right: 2px;
   color: #149ddd;
 }
 
-.about .content p:last-child {
+.sobre .content p:last-child {
   margin-bottom: 0;
 }
 
 
 /*--------------------------------------------------------------
-# Facts
+# habilidades
 --------------------------------------------------------------*/
 
-.facts {
+.habilidades {
   padding-bottom: 30px;
 }
 
-.facts .count-box {
+.habilidades .count-box {
   padding: 30px;
   width: 100%;
 }
 
-.facts .count-box i {
+.habilidades .count-box i {
   display: block;
   font-size: 44px;
   color: #149ddd;
   float: left;
 }
 
-.facts .count-box span {
+.habilidades .count-box span {
   font-size: 48px;
   line-height: 40px;
   display: block;
@@ -218,7 +218,7 @@ section {
   margin-left: 60px;
 }
 
-.facts .count-box p {
+.habilidades .count-box p {
   padding: 15px 0 0 0;
   margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
@@ -226,7 +226,7 @@ section {
   color: #122f57;
 }
 
-.facts .count-box a {
+.habilidades .count-box a {
   font-weight: 600;
   display: block;
   margin-top: 20px;
@@ -236,7 +236,7 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.facts .count-box a:hover {
+.habilidades .count-box a:hover {
   color: #1f5297;
 }
 
@@ -279,10 +279,10 @@ section {
 
 
 /*--------------------------------------------------------------
-# Resume
+# carreira
 --------------------------------------------------------------*/
 
-.resume .resume-title {
+.carreira .carreira-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -290,14 +290,14 @@ section {
   color: #050d18;
 }
 
-.resume .resume-item {
+.carreira .carreira-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #1f5297;
   position: relative;
 }
 
-.resume .resume-item h4 {
+.carreira .carreira-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -307,7 +307,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+.carreira .carreira-item h5 {
   font-size: 16px;
   background: #e4edf9;
   padding: 5px 15px;
@@ -316,19 +316,19 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item ul {
+.carreira .carreira-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item ul li {
+.carreira .carreira-item ul li {
   padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
+.carreira .carreira-item:last-child {
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
+.carreira .carreira-item::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -342,14 +342,14 @@ section {
 
 
 /*--------------------------------------------------------------
-# Portfolio
+# projetos
 --------------------------------------------------------------*/
 
-.portfolio .portfolio-item {
+.projetos .projetos-item {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.projetos #projetos-flters {
   padding: 0;
   margin: 0 auto 35px auto;
   list-style: none;
@@ -359,7 +359,7 @@ section {
   padding: 2px 15px;
 }
 
-.portfolio #portfolio-flters li {
+.projetos #projetos-flters li {
   cursor: pointer;
   display: inline-block;
   padding: 10px 15px 8px 15px;
@@ -372,23 +372,23 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
+.projetos #projetos-flters li:hover,
+.projetos #projetos-flters li.filter-active {
   color: #149ddd;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.projetos #projetos-flters li:last-child {
   margin-right: 0;
 }
 
-.portfolio .portfolio-wrap {
+.projetos .projetos-wrap {
   transition: 0.2s;
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
-.portfolio .portfolio-wrap::before {
+.projetos .projetos-wrap::before {
   content: "";
   background: rgba(1, 7, 39, 0.5);
   position: absolute;
@@ -401,7 +401,7 @@ section {
   opacity: 0;
 }
 
-.portfolio .portfolio-wrap .portfolio-links {
+.projetos .projetos-wrap .projetos-links {
   opacity: 1;
   left: 0;
   right: 0;
@@ -413,7 +413,7 @@ section {
   justify-content: center;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a {
+.projetos .projetos-wrap .projetos-links a {
   color: #fff;
   font-size: 28px;
   text-align: center;
@@ -422,15 +422,15 @@ section {
   width: 50%;
 }
 
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.projetos .projetos-wrap .projetos-links a:hover {
   background: rgba(20, 157, 221, 0.95);
 }
 
-.portfolio .portfolio-wrap .portfolio-links a+a {
+.projetos .projetos-wrap .projetos-links a+a {
   border-left: 1px solid #37b3ed;
 }
 
-.portfolio .portfolio-wrap:hover::before {
+.projetos .projetos-wrap:hover::before {
   top: 0;
   left: 0;
   right: 0;
@@ -438,7 +438,7 @@ section {
   opacity: 1;
 }
 
-.portfolio .portfolio-wrap:hover .portfolio-links {
+.projetos .projetos-wrap:hover .projetos-links {
   opacity: 1;
   bottom: 0;
 }
@@ -466,11 +466,38 @@ section {
   .card {
     margin-bottom: 30px !important;
     width: 350px !important;
-    height: 700px !important;
+    max-height: 850px !important;
   }
-  .img-fluid {
+  .img-fluid-project {
     max-height: 300px !important;
   }
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
+  .tecnologies {
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  .stacks {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop {
+    display: flex;
+  }
+  .mobile {
+    display: none;
+  }
+}
+
+.tecnologies {
+  margin-left: 5px;
+  border-radius: 5px;
 }
 
 .card {
@@ -478,11 +505,11 @@ section {
   border-radius: 10px solid !important;
   border-top: 5px solid #212431;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  height: 700px;
+  height: 750px;
   width: 700px;
 }
 
-.img-fluid {
+.img-fluid-project {
   max-width: 100%;
   height: 400px !important;
   background-color: #F7F7F7;
@@ -511,14 +538,14 @@ section {
 
 
 /*--------------------------------------------------------------
-# Services
+# certifications
 --------------------------------------------------------------*/
 
-.services .icon-box {
+.certifications .icon-box {
   margin-bottom: 20px;
 }
 
-.services .icon {
+.certifications .icon {
   float: left;
   display: flex;
   align-items: center;
@@ -531,35 +558,35 @@ section {
   border: 1px solid #149ddd;
 }
 
-.services .icon i {
+.certifications .icon i {
   color: #fff;
   font-size: 24px;
 }
 
-.services .icon-box:hover .icon {
+.certifications .icon-box:hover .icon {
   background: #fff;
 }
 
-.services .icon-box:hover .icon i {
+.certifications .icon-box:hover .icon i {
   color: #149ddd;
 }
 
-.services .title {
+.certifications .title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.services .title a {
+.certifications .title a {
   color: #343a40;
 }
 
-.services .title a:hover {
+.certifications .title a:hover {
   color: #149ddd;
 }
 
-.services .description {
+.certifications .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
@@ -712,29 +739,29 @@ section {
 
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# projetos Details
 --------------------------------------------------------------*/
 
-.portfolio-details {
+.projetos-details {
   padding-top: 40px;
 }
 
-.portfolio-details .portfolio-details-container {
+.projetos-details .projetos-details-container {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-carousel {
+.projetos-details .projetos-details-carousel {
   position: relative;
   z-index: 1;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-nav,
-.portfolio-details .portfolio-details-carousel .owl-dots {
+.projetos-details .projetos-details-carousel .owl-nav,
+.projetos-details .projetos-details-carousel .owl-dots {
   margin-top: 5px;
   text-align: left;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-dot {
+.projetos-details .projetos-details-carousel .owl-dot {
   display: inline-block;
   margin: 0 10px 0 0;
   width: 12px;
@@ -743,11 +770,11 @@ section {
   background-color: #ddd !important;
 }
 
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
+.projetos-details .projetos-details-carousel .owl-dot.active {
   background-color: #149ddd !important;
 }
 
-.portfolio-details .portfolio-info {
+.projetos-details .projetos-info {
   padding: 30px;
   position: absolute;
   right: 0;
@@ -757,7 +784,7 @@ section {
   z-index: 2;
 }
 
-.portfolio-details .portfolio-info h3 {
+.projetos-details .projetos-info h3 {
   font-size: 22px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -765,37 +792,37 @@ section {
   border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.projetos-details .projetos-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.projetos-details .projetos-info ul li+li {
   margin-top: 10px;
 }
 
-.portfolio-details .portfolio-description {
+.projetos-details .projetos-description {
   padding-top: 50px;
 }
 
-.portfolio-details .portfolio-description h2 {
+.projetos-details .projetos-description h2 {
   width: 50%;
   font-size: 26px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.projetos-details .projetos-description p {
   padding: 0;
 }
 
 @media (max-width: 768px) {
-  .portfolio-details .portfolio-description h2 {
+  .projetos-details .projetos-description h2 {
     width: 100%;
   }
 
-  .portfolio-details .portfolio-info {
+  .projetos-details .projetos-info {
     position: static;
     margin-top: 30px;
   }

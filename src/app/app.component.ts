@@ -30,77 +30,104 @@ export class AppComponent implements OnInit {
     this.age = now.getFullYear() - dataAniversario.getFullYear();
   }
 
-  getProjects(){
+  getProjects() {
     this.projects = [
       {
         title: 'Lista de Presentes - Casamento Thiago & Juliana',
-        description: 'Projeto desenvolvido em Angular para administrar a lista de presentes do casal, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
-        tecnologies: ['bx bx-javascript','bx bx-angular', 'bx bxl-css3', 'bx bxl-html5'],
+        description:
+          'Projeto desenvolvido em Angular para administrar a lista de presentes do casal, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
+        tecnologies: [
+          'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
+          'https://img.shields.io/badge/Angular-red?style=for-the-badge&logo=Angular&logoColor=white',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
+          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+        ],
         url: 'https://matheuspcouto.github.io/Lista-Presentes-T-J/',
         image: 'assets/img/portfolio/form-cha.jpg',
-        class: 'project-text w-100 my-auto text-center text-lg-right'
+        class: 'project-text w-100 my-auto text-center text-lg-right',
       },
       {
         title: 'Avodah Escalas',
-        description: 'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como TCC de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
-        tecnologies: ['bx bxl-microsoft'],
+        description:
+          'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como TCC de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
+          tecnologies: [
+            'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
+            'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
+          ],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/portfolio/Avodah White.png',
-        class: 'project-text w-100 my-auto text-center text-lg-right'
+        class: 'project-text w-100 my-auto text-center text-lg-right',
       },
       {
         title: 'Info Store',
-        description: 'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
-        tecnologies: ['bx bxl-microsoft'],
+        description:
+          'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
+          tecnologies: [
+            'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
+            'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
+          ],
         url: 'https://github.com/matheuspcouto/INFO-STORE',
         image: 'assets/img/portfolio/info.png',
-        class: 'project-text w-100 my-auto text-center text-lg-left'
+        class: 'project-text w-100 my-auto text-center text-lg-left',
       },
       {
         title: 'IrrIot - Sistema de Irrigação Inteligente',
-        description: 'Projeto de interação com Arduino e plataforma Java Web para monitorar dados e controlar o sistema de irrigação de forma econômica e precisa.',
-        tecnologies: ['bx bx-java', 'bx bxl-css3', 'bx bxl-html5'],
+        description:
+          'Projeto de interação com Arduino e plataforma Java Web para monitorar dados e controlar o sistema de irrigação de forma econômica e precisa.',
+          tecnologies: [
+            'https://img.shields.io/badge/Java-F7F7F7?style=for-the-badge&logo=CoffeeScript&logoColor=black',
+            'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
+            'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'
+          ],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
         image: 'assets/img/portfolio/irriot.jfif',
-        class: 'project-text w-100 my-auto text-center text-lg-right'
+        class: 'project-text w-100 my-auto text-center text-lg-right',
       },
-    ]
+    ];
   }
 
-  getCareer(){
-
+  getCareer() {
     this.jobs = [
       {
         title: 'Estágio',
         period: '2019 - 2021',
         company: 'Secretaria de Desenvolvimento Econômico e Emprego - SEDEM',
-        activities: ['Suporte de Hardware e Software', 'Relatórios', 'Administração de Alvarás para Empresas']
+        activities: [
+          'Suporte de Hardware e Software',
+          'Relatórios',
+          'Administração de Alvarás para Empresas',
+        ],
       },
       {
         title: 'Desenvolvedor Java Júnior',
         period: 'Março, 2021 - Outubro, 2021',
         company: 'Eco Açú Tecnologia',
-        activities: ['Desenvolvimento e Manutenção de Sistemas de Administração Pública', 'Gestão e Importação de Banco de Dados', 'Relatórios em Jasper']
+        activities: [
+          'Desenvolvimento e Manutenção de Sistemas de Administração Pública',
+          'Gestão e Importação de Banco de Dados',
+          'Relatórios em Jasper',
+        ],
       },
       {
         title: 'Consultor de Soluções Digitais & Desenvolvedor Fullstack Pleno',
         period: 'Novembro, 2021 - Atualmente',
         company: 'Capgemini Brasil S/A',
-        activities: ['Desenvolvimento e Manutenção de Sistemas Bradesco']
+        activities: ['Desenvolvimento e Manutenção de Sistemas Bradesco'],
       },
-    ]
+    ];
   }
 
-  getArticles(){
+  getArticles() {
     this.articles = [
       {
-        title: 'Ergonomic Assessment of Avodah Scale Management System Interface Quality: a Project-Based Learning Case Study',
+        title:
+          'Ergonomic Assessment of Avodah Scale Management System Interface Quality: a Project-Based Learning Case Study',
         publishedDate: 'Dezembro - 2021',
         journal: 'International Journal of Development Research - IJDR',
         url: 'https://www.journalijdr.com/sites/default/files/issue-pdf/23530_0.pdf',
-        issn: 'ISSN: 2230-9926'
+        issn: 'ISSN: 2230-9926',
       },
-    ]
+    ];
   }
 
   getCertifications() {
@@ -153,11 +180,7 @@ export class AppComponent implements OnInit {
       '> DynamoDB',
     ];
 
-    let itensDevOps = [
-      '> Git',
-      '> Jenkins | Bamboo',
-      '> Docker',
-    ];
+    let itensDevOps = ['> Git', '> Jenkins | Bamboo', '> Docker'];
 
     let itensTest = ['> JUnit', '> Jest', '> Mockito', '> Postman'];
 

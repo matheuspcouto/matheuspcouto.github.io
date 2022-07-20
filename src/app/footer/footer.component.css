@@ -59,21 +59,21 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# contato
 --------------------------------------------------------------*/
 
-.contact {
+.contato {
   padding-bottom: 130px;
 }
 
-.contact .info {
+.contato .info {
   padding: 30px;
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .info i {
+.contato .info i {
   font-size: 20px;
   color: #149ddd;
   float: left;
@@ -87,7 +87,7 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.contato .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
@@ -95,22 +95,22 @@ section {
   color: #050d18;
 }
 
-.contact .info p {
+.contato .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
   color: #173b6c;
 }
 
-.contact .info .email p {
+.contato .info .email p {
   padding-top: 5px;
 }
 
-.contact .info .social-links {
+.contato .info .social-links {
   padding-left: 60px;
 }
 
-.contact .info .social-links a {
+.contato .info .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #333;
@@ -125,14 +125,14 @@ section {
   margin-right: 10px;
 }
 
-.contact .info .social-links a:hover {
+.contato .info .social-links a:hover {
   background: #149ddd;
   color: #fff;
 }
 
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
+.contato .info .email:hover i,
+.contato .info .address:hover i,
+.contato .info .phone:hover i {
   background: #149ddd;
   color: #fff;
 }
@@ -158,7 +158,7 @@ section {
 }
 
 @media (max-width: 1199px) {
-  #contact {
+  #contato {
     margin-left: 0;
   }
 }

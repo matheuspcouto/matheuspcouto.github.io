@@ -13,7 +13,7 @@
 <main id="main">
 
   <!-- ======= Sobre Section ======= -->
-  <section id="about" class="about">
+  <section id="sobre" class="sobre">
     <div class="container">
       <div class="section-title">
         <h2>Sobre</h2>
@@ -52,7 +52,7 @@
   <!-- End Sobre Section -->
 
   <!-- ======= Conhecimentos Section ======= -->
-  <section id="facts" class="facts section-bg">
+  <section id="habilidades" class="habilidades section-bg">
     <div class="container">
       <div class="section-title">
         <h2>Habilidades</h2>
@@ -75,7 +75,7 @@
   <!-- End Conhecimentos Section -->
 
   <!-- ======= Certificações Section ======= -->
-  <section id="services" class="services">
+  <section id="certifications" class="certifications">
     <div class="container">
 
       <div class="section-title">
@@ -93,8 +93,8 @@
   </section>
   <!-- End Certificações Section -->
 
-  <!-- ======= Articles Section ======= -->
-  <section id="services" class="services section-bg">
+  <!-- ======= Artigos Section ======= -->
+  <section id="certifications" class="certifications section-bg">
     <div class="container">
 
       <div class="section-title">
@@ -115,10 +115,10 @@
 
     </div>
   </section>
-  <!-- End Articles Section -->
+  <!-- End Artigos Section -->
 
   <!-- ======= Experiencia e Formação Section ======= -->
-  <section id="resume" class="resume">
+  <section id="carreira" class="carreira">
     <div class="container">
 
       <div class="section-title">
@@ -127,8 +127,8 @@
 
       <div class="row">
         <div class="col-lg-6" data-aos="fade-up">
-          <h3 class="resume-title">Formação Acadêmica</h3>
-          <div class="resume-item">
+          <h3 class="carreira-title">Formação Acadêmica</h3>
+          <div class="carreira-item">
             <h4>Bacharelado em Sistemas de Informação</h4>
             <p><em>Universidade Estadual do Tocantins - UNITINS</em></p>
             <p>Palmas - Tocantins</p>
@@ -137,8 +137,8 @@
         </div>
 
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="resume-title">Experiência Profissional</h3>
-          <div class="resume-item" *ngFor="let job of jobs">
+          <h3 class="carreira-title">Experiência Profissional</h3>
+          <div class="carreira-item" *ngFor="let job of jobs">
             <h4>{{job.title}}</h4>
             <h5>{{job.period}}</h5>
             <p><em>{{job.company}}</em></p>
@@ -152,8 +152,8 @@
   </section>
   <!-- End Experiencia e Formação Section -->
 
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio section-bg">
+  <!-- ======= projetos Section ======= -->
+  <section id="projetos" class="projetos section-bg">
     <div class="container">
 
       <div class="section-title">
@@ -162,16 +162,44 @@
 
       <div class="container">
 
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide desktop" data-ride="carousel">
           <div class="carousel-inner">
-            <div *ngFor="let project of projects; let i = index" [class]="i == 0 ? 'carousel-item active' : 'carousel-item'">
+            <div class="carousel-item active">
               <div class="cards-wrapper">
                 <div class="card-deck">
-                  <div class="card" data-aos="fade-up" data-aos-delay="100">
-                    <img class="img-fluid" [src]="project.image">
+                  <div class="card" *ngFor="let project of projects | slice: 0:2;" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img class="img-fluid-project" [src]="project.image">
                     <div class="card-body">
                       <h5 class="card-title">{{project.title}}</h5>
                       <p class="card-text">{{project.description}}</p>
+                      <div class="stacks">
+                        <h6 class="card-title">Stacks: </h6>
+                        <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <div class="social-links mt-2 text-center">
+                        <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="cards-wrapper">
+                <div class="card-deck">
+                  <div class="card" *ngFor="let project of projects | slice: 2:4;" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img class="img-fluid-project" [src]="project.image">
+                    <div class="card-body">
+                      <h5 class="card-title">{{project.title}}</h5>
+                      <p class="card-text">{{project.description}}</p>
+                      <div class="stacks">
+                        <h6 class="card-title">Stacks: </h6>
+                        <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+                      </div>
                     </div>
                     <div class="card-footer">
                       <div class="social-links mt-2 text-center">
@@ -196,9 +224,33 @@
         </div>
 
       </div>
+
+      <div class="cards-wrapper mobile">
+        <div class="card-deck">
+          <div class="card" *ngFor="let project of projects" data-aos="fade-up" data-aos-delay="100">
+            <img class="img-fluid-project" [src]="project.image">
+            <div class="card-body">
+              <h5 class="card-title">{{project.title}}</h5>
+              <p class="card-text">{{project.description}}</p>
+              <br>
+              <div class="stacks">
+                <h6 class="card-title">Stacks: </h6>
+                <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+              </div>
+              <br>
+            </div>
+            <div class="card-footer">
+              <div class="social-links mt-2 text-center">
+                <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
   </section>
-  <!-- End Portfolio Section -->
+  <!-- End projetos Section -->
 
 </main>
 <!-- End #main -->

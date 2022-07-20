@@ -4,7 +4,7 @@
   <div class="d-flex flex-column">
     <nav class="nav-menu">
       <ul *ngFor="let item of itensMenu">
-        <li [class]="item.isActive ? 'active' : ''"><a [href]="item.route"><i [class]="item.icon"></i>
+        <li [class]="item.isActive ? 'active' : ''" [title]="item.tooltipTitle"><a [href]="item.route"><i [class]="item.icon"></i>
             <span>{{item.title}}</span></a></li>
       </ul>
       <ul>
