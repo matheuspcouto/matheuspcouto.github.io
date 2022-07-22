@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
           'Projeto desenvolvido em Angular para administrar a lista de presentes do casal, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
         tecnologies: [
           'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
-          'https://img.shields.io/badge/Angular-red?style=for-the-badge&logo=Angular&logoColor=white',
+          'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
         ],
@@ -148,7 +148,7 @@ export class AppComponent implements OnInit {
         finishedDate: 'Novembro - 2021',
       },
       {
-        title: 'Inglês Intermediário| Education First',
+        title: 'Inglês Intermediário | Education First',
         icon: 'icofont-google-talk',
         finishedDate: 'Maio - 2022',
       },
