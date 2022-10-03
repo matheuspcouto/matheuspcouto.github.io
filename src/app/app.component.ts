@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
       '- SpringBoot',
       '- JSF | JPA | JSP',
       '> C#',
-      '- .NET Core & Framework',
+      '- .Net',
     ];
 
     let itensFrontEnd = [
