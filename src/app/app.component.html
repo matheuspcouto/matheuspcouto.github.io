@@ -1,260 +1,274 @@
-<app-menu></app-menu>
-
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  <div class="hero-container text-lg-center" data-aos="fade-in">
-    <h3><span class="typed" data-typed-items="Hello World ! "></span></h3>
-    <h1>Bem vindo(a) ao</h1>
-    <h1>meu Portfólio.</h1>
+<!-- PRELOADER -->
+<div class="preloader" *ngIf="carregando">
+  <div class="preloader__img">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
-</section>
-<!-- End Hero -->
+</div>
 
-<main id="main">
+<div *ngIf="!carregando">
+  <app-menu></app-menu>
 
-  <!-- ======= Sobre Section ======= -->
-  <section id="sobre" class="sobre">
-    <div class="container">
-      <div class="section-title">
-        <h2>Sobre</h2>
-        <p>Graduado em Sistemas de Informação. Sou muito comunicativo, criativo, organizado e de fácil convivência,
-          tenho capacidade de aprendizado,
-          sou líder de célula cristã de jovens, e sempre estou em busca de aprimoramento e ampliação de conhecimento.
-          Possuo habilidades com Desenvolvimento Fullstack,
-          Lógica de Programação, Transações SQL, Resolução de Problemas e Inglês Intermediário.
-        </p>
-      </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container text-lg-center" data-aos="fade-in">
+      <h3><span class="typed" data-typed-items="Hello World ! "></span></h3>
+      <h1>Bem vindo(a) ao</h1>
+      <h1>meu Portfólio.</h1>
+    </div>
+  </section>
+  <!-- End Hero -->
 
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/perfil.png" class="img-fluid rounded-lg" alt="">
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Consultor de Soluções Digitais | Desenvolvedor Fullstack Pleno</h3>
-          <p class="font-italic">
-            Atualmente trabalhando na Capgemini atuando como desenvolvedor fullstack, utilizando Java e Angular.
+  <main id="main">
+
+    <!-- ======= Sobre Section ======= -->
+    <section id="sobre" class="sobre">
+      <div class="container">
+        <div class="section-title">
+          <h2>Sobre</h2>
+          <p>Graduado em Sistemas de Informação. Sou muito comunicativo, criativo, organizado e de fácil convivência,
+            tenho capacidade de aprendizado,
+            sou líder de célula cristã de jovens, e sempre estou em busca de aprimoramento e ampliação de conhecimento.
+            Possuo habilidades com Desenvolvimento Fullstack,
+            Lógica de Programação, Transações SQL, Resolução de Problemas e Inglês Intermediário.
           </p>
-          <div class="row">
-            <div class="col-lg-6">
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/perfil.png" class="img-fluid rounded-lg" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Consultor de Soluções Digitais | Desenvolvedor Fullstack Pleno</h3>
+            <p class="font-italic">
+              Atualmente trabalhando na Capgemini atuando como desenvolvedor fullstack, utilizando Java e Angular.
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="icofont-rounded-right"></i> <strong>Data de Nascimento:</strong> 23/05/2000
+                  </li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Morando em:</strong> Palmas - Tocantins</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Idade:</strong> {{age}}</li>
+                  <li><i class="icofont-rounded-right"></i> <strong>Nascido em:</strong> Belém - Pará</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Sobre Section -->
+
+    <!-- ======= Conhecimentos Section ======= -->
+    <section id="habilidades" class="habilidades section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Habilidades</h2>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div *ngFor="let sk of itensSkils" class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i [class]="sk.icon"></i>
+              <span class="section-title">{{sk.title}}</span>
+              <p *ngFor="let item of sk.itens"><strong>{{item}}</strong></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Conhecimentos Section -->
+
+    <!-- ======= Certificações Section ======= -->
+    <section id="certifications" class="certifications">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Certificações</h2>
+        </div>
+
+        <div class="row">
+          <div *ngFor="let cert of certifications" class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i [class]="cert.icon"></i></div>
+            <h4 class="title">{{cert.title}}</h4>
+            <p class="description">Finalizado em: {{cert.finishedDate}}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Certificações Section -->
+
+    <!-- ======= Artigos Section ======= -->
+    <section id="certifications" class="certifications section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Artigos Publicados</h2>
+        </div>
+
+        <div class="row">
+          <div *ngFor="let art of articles" class="col-lg-12 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-book"></i></div>
+            <h4 class="title">{{art.title}}</h4>
+            <p class="description">{{art.journal + ' | ' + art.publishedDate}}</p>
+            <p class="description">{{art.issn}}</p>
+            <a [href]="art.url" target="_blank">
+              <p class="description">Ver mais ></p>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Artigos Section -->
+
+    <!-- ======= Experiencia e Formação Section ======= -->
+    <section id="carreira" class="carreira">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Minha Carreira</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="carreira-title">Formação Acadêmica</h3>
+            <div class="carreira-item">
+              <h4>Bacharelado em Sistemas de Informação</h4>
+              <p><em>Universidade Estadual do Tocantins - UNITINS</em></p>
+              <p>Palmas - Tocantins</p>
+              <h5>2018 - 2021</h5>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="carreira-title">Experiência Profissional</h3>
+            <div class="carreira-item" *ngFor="let job of jobs">
+              <h4>{{job.title}}</h4>
+              <h5>{{job.period}}</h5>
+              <p><em>{{job.company}}</em></p>
               <ul>
-                <li><i class="icofont-rounded-right"></i> <strong>Data de Nascimento:</strong> 23/05/2000
-                </li>
-                <li><i class="icofont-rounded-right"></i> <strong>Morando em:</strong> Palmas - Tocantins</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Idade:</strong> {{age}}</li>
-                <li><i class="icofont-rounded-right"></i> <strong>Nascido em:</strong> Belém - Pará</li>
+                <li *ngFor="let act of job.activities">{{act}}</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- End Sobre Section -->
+    </section>
+    <!-- End Experiencia e Formação Section -->
 
-  <!-- ======= Conhecimentos Section ======= -->
-  <section id="habilidades" class="habilidades section-bg">
-    <div class="container">
-      <div class="section-title">
-        <h2>Habilidades</h2>
-      </div>
-
-      <div class="row no-gutters">
-
-        <div *ngFor="let sk of itensSkils" class="col-lg-4 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up"
-          data-aos-delay="100">
-          <div class="count-box">
-            <i [class]="sk.icon"></i>
-            <span class="section-title">{{sk.title}}</span>
-            <p *ngFor="let item of sk.itens"><strong>{{item}}</strong></p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- End Conhecimentos Section -->
-
-  <!-- ======= Certificações Section ======= -->
-  <section id="certifications" class="certifications">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Certificações</h2>
-      </div>
-
-      <div class="row">
-        <div *ngFor="let cert of certifications" class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i [class]="cert.icon"></i></div>
-          <h4 class="title">{{cert.title}}</h4>
-          <p class="description">Finalizado em: {{cert.finishedDate}}</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Certificações Section -->
-
-  <!-- ======= Artigos Section ======= -->
-  <section id="certifications" class="certifications section-bg">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Artigos Publicados</h2>
-      </div>
-
-      <div class="row">
-        <div *ngFor="let art of articles" class="col-lg-12 col-md-6 icon-box" data-aos="fade-up">
-          <div class="icon"><i class="icofont-book"></i></div>
-          <h4 class="title">{{art.title}}</h4>
-          <p class="description">{{art.journal + ' | ' + art.publishedDate}}</p>
-          <p class="description">{{art.issn}}</p>
-          <a [href]="art.url" target="_blank">
-            <p class="description">Ver mais ></p>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- End Artigos Section -->
-
-  <!-- ======= Experiencia e Formação Section ======= -->
-  <section id="carreira" class="carreira">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Minha Carreira</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-6" data-aos="fade-up">
-          <h3 class="carreira-title">Formação Acadêmica</h3>
-          <div class="carreira-item">
-            <h4>Bacharelado em Sistemas de Informação</h4>
-            <p><em>Universidade Estadual do Tocantins - UNITINS</em></p>
-            <p>Palmas - Tocantins</p>
-            <h5>2018 - 2021</h5>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="carreira-title">Experiência Profissional</h3>
-          <div class="carreira-item" *ngFor="let job of jobs">
-            <h4>{{job.title}}</h4>
-            <h5>{{job.period}}</h5>
-            <p><em>{{job.company}}</em></p>
-            <ul>
-              <li *ngFor="let act of job.activities">{{act}}</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Experiencia e Formação Section -->
-
-  <!-- ======= projetos Section ======= -->
-  <section id="projetos" class="projetos section-bg">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Meus Projetos</h2>
-      </div>
-
+    <!-- ======= projetos Section ======= -->
+    <section id="projetos" class="projetos section-bg">
       <div class="container">
 
-        <div id="carouselExampleControls" class="carousel slide desktop" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="cards-wrapper">
-                <div class="card-deck">
-                  <div class="card" *ngFor="let project of projects | slice: 0:2;" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <img class="img-fluid-project" [src]="project.image">
-                    <div class="card-body">
-                      <h5 class="card-title">{{project.title}}</h5>
-                      <p class="card-text">{{project.description}}</p>
-                      <div class="stacks">
-                        <h6 class="card-title">Stacks: </h6>
-                        <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+        <div class="section-title">
+          <h2>Meus Projetos</h2>
+        </div>
+
+        <div class="container">
+
+          <div id="carouselExampleControls" class="carousel slide desktop" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <div class="card-deck">
+                    <div class="card" *ngFor="let project of projects | slice: 0:2;" data-aos="fade-up"
+                      data-aos-delay="100">
+                      <img class="img-fluid-project" [src]="project.image">
+                      <div class="card-body">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <p class="card-text">{{project.description}}</p>
+                        <div class="stacks">
+                          <h6 class="card-title">Stacks: </h6>
+                          <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="social-links mt-2 text-center">
+                          <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
+                        </div>
                       </div>
                     </div>
-                    <div class="card-footer">
-                      <div class="social-links mt-2 text-center">
-                        <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card-deck">
+                    <div class="card" *ngFor="let project of projects | slice: 2:4;" data-aos="fade-up"
+                      data-aos-delay="100">
+                      <img class="img-fluid-project" [src]="project.image">
+                      <div class="card-body">
+                        <h5 class="card-title">{{project.title}}</h5>
+                        <p class="card-text">{{project.description}}</p>
+                        <div class="stacks">
+                          <h6 class="card-title">Stacks: </h6>
+                          <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="social-links mt-2 text-center">
+                          <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="cards-wrapper">
-                <div class="card-deck">
-                  <div class="card" *ngFor="let project of projects | slice: 2:4;" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <img class="img-fluid-project" [src]="project.image">
-                    <div class="card-body">
-                      <h5 class="card-title">{{project.title}}</h5>
-                      <p class="card-text">{{project.description}}</p>
-                      <div class="stacks">
-                        <h6 class="card-title">Stacks: </h6>
-                        <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div class="social-links mt-2 text-center">
-                        <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
-                      </div>
-                    </div>
-                  </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"
+              *ngIf="projects.length > 0">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"
+              *ngIf="projects.length > 0">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="cards-wrapper mobile">
+          <div class="card-deck">
+            <div class="card" *ngFor="let project of projects" data-aos="fade-up" data-aos-delay="100">
+              <img class="img-fluid-project" [src]="project.image">
+              <div class="card-body">
+                <h5 class="card-title">{{project.title}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                <br>
+                <div class="stacks">
+                  <h6 class="card-title">Stacks: </h6>
+                  <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
+                </div>
+                <br>
+              </div>
+              <div class="card-footer">
+                <div class="social-links mt-2 text-center">
+                  <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
                 </div>
               </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"
-            *ngIf="projects.length > 0">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"
-            *ngIf="projects.length > 0">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-
-      </div>
-
-      <div class="cards-wrapper mobile">
-        <div class="card-deck">
-          <div class="card" *ngFor="let project of projects" data-aos="fade-up" data-aos-delay="100">
-            <img class="img-fluid-project" [src]="project.image">
-            <div class="card-body">
-              <h5 class="card-title">{{project.title}}</h5>
-              <p class="card-text">{{project.description}}</p>
-              <br>
-              <div class="stacks">
-                <h6 class="card-title">Stacks: </h6>
-                <img *ngFor="let tec of project.tecnologies" [src]="tec" class="tecnologies" />
-              </div>
-              <br>
-            </div>
-            <div class="card-footer">
-              <div class="social-links mt-2 text-center">
-                <a [href]="project.url" target="_blank"><i class='bx bx-chevron-right'></i></a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
 
-  </section>
-  <!-- End projetos Section -->
+    </section>
+    <!-- End projetos Section -->
 
-</main>
-<!-- End #main -->
+  </main>
+  <!-- End #main -->
 
-<app-footer></app-footer>
+  <app-footer></app-footer>
 
-<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+</div>

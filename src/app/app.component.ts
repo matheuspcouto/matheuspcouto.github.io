@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Portfolio - Matheus Pimentel Do Couto';
+  carregando = false;
 
   itensSkils: any[] = [];
   certifications: any[] = [];
@@ -18,6 +19,7 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.carregando = true;
     this.getSkills();
     this.getCertifications();
     this.getArticles();
@@ -28,6 +30,7 @@ export class AppComponent implements OnInit {
     let now = new Date();
 
     this.age = now.getFullYear() - dataAniversario.getFullYear();
+    this.carregando = false;
   }
 
   getProjects() {
