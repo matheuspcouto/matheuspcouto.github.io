@@ -36,17 +36,17 @@ export class AppComponent implements OnInit {
   getProjects() {
     this.projects = [
       {
-        title: 'Formulário de Inscrição - Tribo Intercélulas',
+        title: 'Tribolão da Copa do Mundo',
         description:
-          'Projeto desenvolvido em Angular para administrar as inscrições do evento Intercélulas da Tribo, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
+          'Projeto desenvolvido em Angular para realizar um bolão dos vencedores da copa do mundo 2022 para a Tribo, a aplicação interage com uma planilha do google, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
         tecnologies: [
           'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
         ],
-        url: 'https://matheuspcouto.github.io/Inscricao-Tribo-Intercelulas/',
-        image: 'assets/img/portfolio/Triboy.png',
+        url: 'https://matheuspcouto.github.io/Tribolao-Copa-2022/',
+        image: 'assets/img/portfolio/tribolao.png',
         class: 'project-text w-100 my-auto text-center text-lg-right',
       },
       {
