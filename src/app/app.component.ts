@@ -26,10 +26,15 @@ export class AppComponent implements OnInit {
     this.getCareer();
     this.getProjects();
 
-    let dataAniversario = new Date('2000-05-23');
-    let now = new Date();
+    const now = new Date();
+    const dataNasc = new Date('2000-05-23');
+    const mes = now.getMonth() - dataNasc.getMonth();
+    this.age = now.getFullYear() - dataNasc.getFullYear();
 
-    this.age = now.getFullYear() - dataAniversario.getFullYear();
+    if (mes < 0 || (mes === 0 && now.getDate() < dataNasc.getDate())) {
+      this.age--;
+    }
+
     this.carregando = false;
   }
 
@@ -79,8 +84,7 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Portfólio - Matheus Pimentel',
-        description:
-          'Meu portfólio particular profissional.',
+        description: 'Meu portfólio particular profissional.',
         tecnologies: [
           'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
@@ -108,10 +112,10 @@ export class AppComponent implements OnInit {
         title: 'Avodah Escalas',
         description:
           'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como TCC de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
-          tecnologies: [
-            'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
-            'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
-          ],
+        tecnologies: [
+          'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
+          'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
+        ],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/projetos/Avodah White.png',
         class: 'project-text w-100 my-auto text-center text-lg-right',
@@ -120,10 +124,10 @@ export class AppComponent implements OnInit {
         title: 'Info Store',
         description:
           'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
-          tecnologies: [
-            'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
-            'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
-          ],
+        tecnologies: [
+          'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
+          'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
+        ],
         url: 'https://github.com/matheuspcouto/INFO-STORE',
         image: 'assets/img/projetos/info.png',
         class: 'project-text w-100 my-auto text-center text-lg-left',
@@ -132,11 +136,11 @@ export class AppComponent implements OnInit {
         title: 'IrrIot - Sistema de Irrigação Inteligente',
         description:
           'Projeto de interação com Arduino e plataforma Java Web para monitorar dados e controlar o sistema de irrigação de forma econômica e precisa.',
-          tecnologies: [
-            'https://img.shields.io/badge/Java-F7F7F7?style=for-the-badge&logo=CoffeeScript&logoColor=black',
-            'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-            'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'
-          ],
+        tecnologies: [
+          'https://img.shields.io/badge/Java-F7F7F7?style=for-the-badge&logo=CoffeeScript&logoColor=black',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
+          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+        ],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
         image: 'assets/img/projetos/irriot.jfif',
         class: 'project-text w-100 my-auto text-center text-lg-right',
@@ -153,7 +157,7 @@ export class AppComponent implements OnInit {
         activities: [
           'Suporte de Hardware e Software',
           'Administração de Alvarás para Empresas',
-          'Relatórios'
+          'Relatórios',
         ],
       },
       {
@@ -173,7 +177,7 @@ export class AppComponent implements OnInit {
         activities: [
           'Desenvolvimento e Manutenção de Sistemas Bradesco',
           'Supervisão de desenvolvedores júnior',
-          'Builds e deploys de aplicações'
+          'Builds e deploys de aplicações',
         ],
       },
     ];
