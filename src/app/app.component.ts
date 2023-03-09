@@ -16,7 +16,10 @@ export class AppComponent implements OnInit {
   projects: any[] = [];
   age: any;
 
-  constructor() {}
+  // TODO: melhorar css e responsividade
+  // TODO: Colocar App Planilhas Loja e Form
+
+  constructor() { }
 
   ngOnInit(): void {
     this.carregando = true;
@@ -41,46 +44,19 @@ export class AppComponent implements OnInit {
   getProjects() {
     this.projects = [
       {
-        title: 'Acampamento Tribo-Soma',
+        title: 'Tribo Store',
         description:
-          'Projeto desenvolvido em Angular para realizar as inscrições do acampamento realizado pelos jovens da Igreja Metodista em Palmas, a aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
+          'Sistema de Loja Virtual da Tribo, desenvolvido para realizar e consultar os pedidos feitos na loja. A aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Integração realizada por meio de API Back-End criada em Javascript/Google App Script e Angular (Front-End).',
         tecnologies: [
           'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          //'https://img.shields.io/badge/Sheets-188038?style=for-the-badge&logo=googleSheets&logoColor=white',
         ],
-        url: 'https://matheuspcouto.github.io/Acampamento-Tribo-Soma/',
-        image: 'assets/img/projetos/acampamento.jpg',
+        url: 'https://matheuspcouto.github.io/Tribo-Store/home',
+        image: 'assets/img/projetos/tribo-store.png',
         class: 'project-text w-100 my-auto text-center text-lg-left',
-      },
-      {
-        title: 'Tribolão da Copa do Mundo',
-        description:
-          'Projeto desenvolvido em Angular para realizar um bolão da copa do mundo 2022 da Tribo (área masculina de jovens da Igreja Metodista em Palmas), a aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
-        tecnologies: [
-          'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
-          'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
-        ],
-        url: 'https://matheuspcouto.github.io/Tribolao-Copa-2022/',
-        image: 'assets/img/projetos/tribolao.png',
-        class: 'project-text w-100 my-auto text-center text-lg-right',
-      },
-      {
-        title: 'Intercélulas - Inscrições',
-        description:
-          'Projeto desenvolvido em Angular para realizar as inscrições do evento poliesportivo Intercélulas da Tribo (área masculina de jovens da Igreja Metodista em Palmas), a aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Interação realizada por meio de API disponibilizada pelo sheets.db.io.',
-        tecnologies: [
-          'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
-          'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
-        ],
-        url: 'https://matheuspcouto.github.io/Inscricao-Tribo-Intercelulas/',
-        image: 'assets/img/projetos/Triboy.png',
-        class: 'project-text w-100 my-auto text-center text-lg-right',
       },
       {
         title: 'Portfólio - Matheus Pimentel',
@@ -217,6 +193,11 @@ export class AppComponent implements OnInit {
         title: 'Testes Unitários Java - JUnit, Mockito e TDD | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
+      },
+      {
+        title: 'Desenvolvimento Web Completo | Udemy',
+        icon: 'icofont-code-alt',
+        finishedDate: 'Janeiro - 2023',
       },
       {
         title: 'Academia Angular | Impacta',
