@@ -30,12 +30,6 @@
       <div class="container">
         <div class="section-title">
           <h2>Sobre</h2>
-          <p>Sou muito comunicativo, criativo, organizado e de fácil convivência,
-            tenho capacidade de aprendizado,
-            sou líder de célula cristã de jovens, e sempre estou em busca de aprimoramento e ampliação de conhecimento.
-            Graduado em Sistemas de Informação, possuo habilidades com Desenvolvimento Fullstack,
-            Lógica de Programação, Transações SQL, Resolução de Problemas e Inglês Intermediário.
-          </p>
         </div>
 
         <div class="row">
@@ -43,9 +37,20 @@
             <img src="assets/img/perfil.png" class="img-fluid rounded-lg" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Desenvolvedor Fullstack</h3>
+            <h3>Matheus Pimentel Do Couto</h3>
             <p class="font-italic">
-              Atualmente trabalhando na Capgemini atuando como desenvolvedor fullstack, com as stacks Java e Angular.
+              Sou um desenvolvedor fullstack, com bacharel em Sistemas de Informação. Sou muito comunicativo, criativo,
+              organizado e de fácil convívio, além de ter facilidade de aprendizado. Sou líder de célula cristã de
+              jovens,
+              e sempre estou em busca de aprimoramento e ampliação de conhecimento.
+            </p>
+            <p class="font-italic">
+              Atuei em projetos de grande tráfego bancário e financeiro como sistemas de Pix, Open Finance e Recargas de
+              celular. Finalizei minha graduação com uma nota perfeita em minha monografia, que explorava desenvolver
+              uma
+              aplicação web e atender aos mais diversos públicos, promovendo uma acessibilidade melhor utilizando
+              recursos
+              de UX e UI.
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -100,6 +105,7 @@
             <div class="icon"><i [class]="cert.icon"></i></div>
             <h4 class="title">{{cert.title}}</h4>
             <p class="description">Obtido em: {{cert.finishedDate}}</p>
+            <a *ngIf="cert.url" class="description" target="_blank" [href]="cert.url">Ver Certificado ></a>
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Portfolio - Matheus Pimentel Do Couto';
   carregando = false;
 
   itensSkils: any[] = [];
@@ -151,7 +150,7 @@ export class AppComponent implements OnInit {
         period: 'Novembro, 2021 - Atualmente',
         company: 'Capgemini Brasil S/A',
         activities: [
-          'Desenvolvimento e Manutenção de Sistemas Bradesco',
+          'Desenvolvimento e Manutenção de Sistemas Bradesco (Pix, Open Finance e Recarga de Celular)',
           'Supervisão de desenvolvedores júnior',
           'Builds e deploys de aplicações',
         ],
@@ -175,29 +174,40 @@ export class AppComponent implements OnInit {
   getCertifications() {
     this.certifications = [
       {
-        title: 'Programação em Java do básico ao avançado | Udemy',
+        title: 'Programação em Java - Básico ao Avançado | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-0f71c539-372d-493c-9ac1-4dfafc3cac84/'
+      },
+      {
+        title: 'Spring Framework 5 | Udemy',
+        icon: 'icofont-brand-java',
+        finishedDate: 'Abril - 2023',
+        url: 'https://www.udemy.com/certificate/UC-090f45ab-bc0d-4016-bfd0-d11df6ade4d4/'
       },
       {
         title: 'JSF for Beginners | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
+        url: 'https://udemy.com/certificate/UC-1208c651-7487-484f-a3eb-7f4833d6032c/'
       },
       {
         title: 'JPA and Hibernate | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
+        url: 'https://udemy.com/certificate/UC-9493b3e3-8172-4b85-8968-c6e7493d93ff/'
       },
       {
         title: 'Testes Unitários Java - JUnit, Mockito e TDD | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-c1da9160-5c04-4197-87d8-0a5b2b2d1d4c/'
       },
       {
         title: 'Desenvolvimento Web Completo | Udemy',
         icon: 'icofont-code-alt',
         finishedDate: 'Janeiro - 2023',
+        url: 'https://udemy.com/certificate/UC-4601788e-45e3-4e71-accd-605b4e735b1e/'
       },
       {
         title: 'Academia Angular | Impacta',
@@ -208,6 +218,7 @@ export class AppComponent implements OnInit {
         title: 'Testes Unitários com Jest | Udemy',
         icon: 'icofont-verification-check',
         finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-a470165f-fc55-40c0-a3ad-849931e5e865/'
       },
       {
         title: 'SQL Completo | Softblue',
@@ -220,24 +231,22 @@ export class AppComponent implements OnInit {
         finishedDate: 'Novembro - 2020',
       },
       {
-        title: 'HPE Fortify | Udemy',
-        icon: 'icofont-verification-check',
-        finishedDate: 'Outubro - 2022',
-      },
-      {
         title: 'Postman - The Complete Guide | Udemy',
         icon: 'icofont-ui-message',
         finishedDate: 'Outubro - 2022',
+        url: 'https://udemy.com/certificate/UC-7d30b94e-831b-46d4-a967-0d5f465be054/'
       },
       {
         title: 'Introduction to Software Engineering | Coursera (IBM)',
         icon: 'icofont-brand-ibm',
         finishedDate: 'Outubro - 2022',
+        url: 'https://www.coursera.org/account/accomplishments/verify/NCVMRT355WXU'
       },
       {
-        title: 'Inglês Intermediário | Education First',
+        title: 'Inglês Intermediário (B1) | Education First',
         icon: 'icofont-google-talk',
         finishedDate: 'Maio - 2022',
+        url: 'https://www.efset.org/cert/EqCQ9H'
       },
     ];
   }
@@ -247,8 +256,6 @@ export class AppComponent implements OnInit {
       '> Java',
       '- SpringBoot',
       '- JSF | JPA | JSP',
-      '> C#',
-      '- .Net',
     ];
 
     let itensFrontEnd = [
@@ -300,7 +307,7 @@ export class AppComponent implements OnInit {
       {
         title: 'Idiomas',
         icon: 'icofont-globe',
-        itens: ['Inglês - Intermediário'],
+        itens: ['Inglês - Intermediário (B1)'],
       },
     ];
   }
