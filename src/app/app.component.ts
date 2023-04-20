@@ -136,7 +136,7 @@ export class AppComponent implements OnInit {
         ],
       },
       {
-        title: 'Desenvolvedor Java Júnior',
+        title: 'Desenvolvedor Back-End',
         period: 'Março, 2021 - Outubro, 2021',
         company: 'Eco Açú Tecnologia',
         activities: [
