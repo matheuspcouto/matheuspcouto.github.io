@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       {
         title: 'Tribo Store',
         description:
-          'Sistema de Loja Virtual da Tribo, desenvolvido para realizar e consultar os pedidos feitos na loja. A aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Integração realizada por meio de API Back-End criada em Javascript/Google App Script e Angular (Front-End).',
+          'Sistema E-Commerce da Tribo, desenvolvido para realizar e consultar os pedidos feitos na loja. A aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Integração realizada por meio de API Back-End criada em Javascript/Google App Script e Angular (Front-End).',
         tecnologies: [
           'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
@@ -59,7 +59,7 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Portfólio - Matheus Pimentel',
-        description: 'Meu portfólio particular profissional.',
+        description: 'Meu portfólio online profissional.',
         tecnologies: [
           'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
@@ -73,7 +73,7 @@ export class AppComponent implements OnInit {
       {
         title: 'Portfólio - Hávyla Ferreira',
         description:
-          'Portfólio particular da profissional de Recursos Humanos, Hávyla Ferreira Souza.',
+          'Portfólio online da profissional de Recursos Humanos, Hávyla Ferreira Souza.',
         tecnologies: [
           'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
@@ -226,11 +226,6 @@ export class AppComponent implements OnInit {
         finishedDate: 'Junho - 2019',
       },
       {
-        title: 'Lógica de Programação | Softblue',
-        icon: 'icofont-computer',
-        finishedDate: 'Novembro - 2020',
-      },
-      {
         title: 'Postman - The Complete Guide | Udemy',
         icon: 'icofont-ui-message',
         finishedDate: 'Outubro - 2022',
@@ -256,12 +251,13 @@ export class AppComponent implements OnInit {
       '> Java',
       '- SpringBoot',
       '- JSF | JPA | JSP',
+      '> Node',
+      '- ExpressJS | TypeScript',
     ];
 
     let itensFrontEnd = [
       '> HTML & CSS',
       '> Bootstrap',
-      '> TypeScript',
       '> JavaScript',
       '- Angular',
     ];
@@ -274,7 +270,7 @@ export class AppComponent implements OnInit {
       '> DynamoDB',
     ];
 
-    let itensDevOps = ['> Git', '> Jenkins | Bamboo', '> Docker'];
+    let itensDevOps = ['> Git', '> Jenkins | Bamboo'];
 
     let itensTest = ['> JUnit', '> Jest', '> Mockito', '> Postman'];
 
