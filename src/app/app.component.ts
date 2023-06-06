@@ -226,10 +226,10 @@ export class AppComponent implements OnInit {
         finishedDate: 'Junho - 2019',
       },
       {
-        title: 'Postman - The Complete Guide | Udemy',
-        icon: 'icofont-ui-message',
-        finishedDate: 'Outubro - 2022',
-        url: 'https://udemy.com/certificate/UC-7d30b94e-831b-46d4-a967-0d5f465be054/'
+        title: 'Git Completo | Udemy',
+        icon: 'icofont-github',
+        finishedDate: 'Maio - 2023',
+        url: 'https://www.udemy.com/certificate/UC-dbe43478-080f-4f4e-92e7-2cef8edfe943/'
       },
       {
         title: 'Introduction to Software Engineering | Coursera (IBM)',
