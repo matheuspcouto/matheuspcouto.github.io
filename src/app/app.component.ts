@@ -44,27 +44,22 @@ export class AppComponent implements OnInit {
     this.projects = [
       {
         title: 'Tribo Store',
-        description:
-          'Sistema E-Commerce da Tribo, desenvolvido para realizar e consultar os pedidos feitos na loja. A aplicação interage com uma planilha Google Sheets, atualizando e listando os itens. Integração realizada por meio de API Back-End criada em Javascript/Google App Script e Angular (Front-End).',
+        description: 'Sistema E-Commerce da Tribo que foi projetado para consultar e realizar pedidos na loja. Utilizando uma estrutura REST API, o Back-End foi implementado em Node.js e o Front-End em Angular. Com um pipeline de CI/CD construído através do Github Actions.',
         tecnologies: [
-          'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
+          'https://img.shields.io/badge/NodeJS-009929?style=for-the-badge&logo=Javascript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
-          //'https://img.shields.io/badge/Sheets-188038?style=for-the-badge&logo=googleSheets&logoColor=white',
+          'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
-        url: 'https://matheuspcouto.github.io/Tribo-Store/home',
+        url: 'https://tribo-store.vercel.app/home',
         image: 'assets/img/projetos/tribo-store.png',
         class: 'project-text w-100 my-auto text-center text-lg-left',
       },
       {
         title: 'Portfólio - Matheus Pimentel',
-        description: 'Meu portfólio online profissional.',
+        description: 'Meu portfólio online é uma plataforma que reflete minha trajetória profissional. Nele, destaco minha carreira e formação, exibo meus certificados e habilidades, e apresento com orgulho os projetos em que trabalhei. Por meio desse portfólio, busco transmitir minha paixão pela área de tecnologia e minha dedicação em criar soluções inovadoras e impactantes.',
         tecnologies: [
-          'https://img.shields.io/badge/Typescript-yellow?style=for-the-badge&logo=Typescript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
         url: 'https://matheuspcouto.github.io',
         image: 'assets/img/projetos/portfolio.png',
@@ -72,12 +67,12 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Portfólio - Hávyla Ferreira',
-        description:
-          'Portfólio online da profissional de Recursos Humanos, Hávyla Ferreira Souza.',
+        description: 'Portfólio online da profissional de Recursos Humanos, Hávyla Ferreira Souza. Desenvolvido em HTML, CSS e Javascript, o site apresenta a trajetória profissional da Hávyla, suas experiências e habilidades.',
         tecnologies: [
-          'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
+          'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
+          'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
         url: 'https://matheuspcouto.github.io/portfolio-havyla',
         image: 'assets/img/projetos/havyla.png',
@@ -85,8 +80,7 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Avodah Escalas',
-        description:
-          'Sistema de gestão e geração de escalas dinâmicas. Projeto realizado como TCC de Sistemas de Informação direcionado à Igreja Metodista em Palmas.',
+        description: 'Projeto de gestão e geração de escalas desenvolvido como TCC em Sistemas de Informação para a Igreja Metodista em Palmas, o qual recebeu uma nota perfeita em sua apresentação. O mesmo oferece facilitar a organização de escalas de forma flexível, permitindo uma melhor gestão das atividades dentro da igreja.',
         tecnologies: [
           'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
           'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
@@ -96,25 +90,13 @@ export class AppComponent implements OnInit {
         class: 'project-text w-100 my-auto text-center text-lg-right',
       },
       {
-        title: 'Info Store',
-        description:
-          'Sistema de Controle de Estoque de uma loja de informática. Projeto realizado na disciplina de Tópicos em Programação 3 durante o 5º período.',
-        tecnologies: [
-          'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
-          'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
-        ],
-        url: 'https://github.com/matheuspcouto/INFO-STORE',
-        image: 'assets/img/projetos/info.png',
-        class: 'project-text w-100 my-auto text-center text-lg-left',
-      },
-      {
         title: 'IrrIot - Sistema de Irrigação Inteligente',
         description:
-          'Projeto de interação com Arduino e plataforma Java Web para monitorar dados e controlar o sistema de irrigação de forma econômica e precisa.',
+          'O projeto apresentado na Feira Agrotins de 2019 consiste em uma integração entre Arduino e plataforma Java Web para monitoramento e controle eficiente de sistema de irrigação. Essa solução inovadora permite economia de recursos e precisão no processo de irrigação, garantindo o uso otimizado de água para a produção agrícola.',
         tecnologies: [
           'https://img.shields.io/badge/Java-F7F7F7?style=for-the-badge&logo=CoffeeScript&logoColor=black',
-          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
         ],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
         image: 'assets/img/projetos/irriot.jfif',
@@ -152,7 +134,7 @@ export class AppComponent implements OnInit {
         activities: [
           'Desenvolvimento e Manutenção de Sistemas Bradesco (Pix, Open Finance e Recarga de Celular)',
           'Supervisão de desenvolvedores júnior',
-          'Builds e deploys de aplicações',
+          'CI/CD',
         ],
       },
     ];
@@ -173,6 +155,12 @@ export class AppComponent implements OnInit {
 
   getCertifications() {
     this.certifications = [
+      {
+        title: 'Fundamentos para Desenvolvimento de Software | Microsoft e LinkedIn',
+        icon: 'icofont-brand-microsoft',
+        finishedDate: 'Julho - 2023',
+        url: 'https://www.linkedin.com/learning/certificates/18348bf148e88c4fa136ffbf75a1feb4c8bf6b6d930fd9d651a0acdebb96e852'
+      },
       {
         title: 'Programação em Java - Básico ao Avançado | Udemy',
         icon: 'icofont-brand-java',
@@ -198,12 +186,6 @@ export class AppComponent implements OnInit {
         url: 'https://udemy.com/certificate/UC-9493b3e3-8172-4b85-8968-c6e7493d93ff/'
       },
       {
-        title: 'Testes Unitários Java - JUnit, Mockito e TDD | Udemy',
-        icon: 'icofont-brand-java',
-        finishedDate: 'Outubro - 2022',
-        url: 'https://www.udemy.com/certificate/UC-c1da9160-5c04-4197-87d8-0a5b2b2d1d4c/'
-      },
-      {
         title: 'Desenvolvimento Web Completo | Udemy',
         icon: 'icofont-code-alt',
         finishedDate: 'Janeiro - 2023',
@@ -213,12 +195,6 @@ export class AppComponent implements OnInit {
         title: 'Academia Angular | Impacta',
         icon: 'icofont-file-javascript',
         finishedDate: 'Novembro - 2021',
-      },
-      {
-        title: 'Testes Unitários com Jest | Udemy',
-        icon: 'icofont-verification-check',
-        finishedDate: 'Outubro - 2022',
-        url: 'https://www.udemy.com/certificate/UC-a470165f-fc55-40c0-a3ad-849931e5e865/'
       },
       {
         title: 'SQL Completo | Softblue',
@@ -232,10 +208,10 @@ export class AppComponent implements OnInit {
         url: 'https://www.udemy.com/certificate/UC-dbe43478-080f-4f4e-92e7-2cef8edfe943/'
       },
       {
-        title: 'Introduction to Software Engineering | Coursera (IBM)',
-        icon: 'icofont-brand-ibm',
-        finishedDate: 'Outubro - 2022',
-        url: 'https://www.coursera.org/account/accomplishments/verify/NCVMRT355WXU'
+        title: 'Atlassian Bamboo | Udemy',
+        icon: 'icofont-automation',
+        finishedDate: 'Junho - 2023',
+        url: 'https://www.udemy.com/certificate/UC-d1ef9257-c9ed-4253-af57-1228cc4dc14f/'
       },
       {
         title: 'Inglês Intermediário (B1) | Education First',
@@ -267,10 +243,9 @@ export class AppComponent implements OnInit {
       '> SQL Server',
       '> MySQL',
       '> MongoDB',
-      '> DynamoDB',
     ];
 
-    let itensDevOps = ['> Git', '> Jenkins | Bamboo'];
+    let itensDevOps = ['> Git', '- Github | Bitbucket', '> Atlassian Bamboo', '> Github Actions'];
 
     let itensTest = ['> JUnit', '> Jest', '> Mockito', '> Postman'];
 
