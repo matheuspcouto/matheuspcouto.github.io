@@ -266,7 +266,7 @@ export class AppComponent implements OnInit {
     let itensBackEnd = [
       '> Java',
       '- SpringBoot',
-      '- JSF | JPA | JSP',
+      '- JSF | JPA',
       '> NodeJS',
       '- ExpressJS | TypeScript',
     ];
@@ -285,7 +285,7 @@ export class AppComponent implements OnInit {
       '> MongoDB',
     ];
 
-    let itensDevOps = ['> Git', '- Github | Bitbucket', '> Atlassian Bamboo', '> Github Actions'];
+    let itensDevOps = ['> Git', '- Github | Bitbucket', '> Bamboo', '> JIRA', '> Confluence'];
 
     let itensTest = ['> JUnit', '> Jest', '> Mockito', '> Postman'];
 
@@ -306,14 +306,14 @@ export class AppComponent implements OnInit {
         itens: itensDatabase,
       },
       {
-        title: 'DevOps',
-        icon: 'bx bxl-git',
-        itens: itensDevOps,
-      },
-      {
         title: 'Testes',
         icon: 'bx bx-wrench',
         itens: itensTest,
+      },
+      {
+        title: 'DevOps & Agile',
+        icon: 'bx bxl-git',
+        itens: itensDevOps,
       },
       {
         title: 'Idiomas',
