@@ -39,21 +39,23 @@
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
             <h3>Matheus Pimentel Do Couto</h3>
             <p class="font-italic">
-              Eu sou um desenvolvedor fullstack com formação em Sistemas de Informação. Tenho habilidades comunicativas,
-              criativas e organizacionais, o que torna minha interação com os outros bastante fácil. Sou conhecido por
-              minha capacidade de aprender rapidamente e estou sempre em busca de oportunidades para aprimorar e
-              expandir meus conhecimentos. Minha experiência inclui projetos de grande escala no setor bancário e
-              financeiro, como sistemas de Pix, Open Finance e Recargas de celular.
-
+              Eu sou um desenvolvedor Fullstack com bacharelado em Sistemas de Informação. Minha paixão por
+              tecnologia e inovação me levou a atuar principalmente com as stacks Java e Angular, colaborando em
+              projetos de grande escala no setor bancário e financeiro, como sistemas de Pix, Open Finance e Recargas de
+              celular.
             </p>
             <p class="font-italic">
-              Durante minha graduação, concluí meu curso com uma nota perfeita em meu TCC, que explorava o
-              desenvolvimento de uma aplicação web com foco em acessibilidade para diversos públicos, utilizando
-              recursos avançados de UX e UI.
+              Com habilidades comunicativas, criativas e organizacionais, estou sempre em busca de soluções inovadoras
+              para os desafios que encontro em cada projeto. Durante minha graduação, tive a oportunidade de concluir
+              meu curso com uma nota perfeita em meu TCC, onde desenvolvi uma aplicação web focada em acessibilidade
+              para diversos públicos, incorporando recursos avançados de UX/UI para garantir uma experiência inclusiva e
+              envolvente.
             </p>
             <p class="font-italic">
-              Além do meu trabalho na área de desenvolvimento, sou também líder de uma célula de jovens e de um
-              ministério de comunicação visual, onde aplico minhas habilidades de liderança e criatividade.
+              Além do meu trabalho na área de desenvolvimento, desempenho um papel ativo como líder de uma célula de
+              jovens e de um ministério de comunicação visual. Nestas atividades, aplico minha paixão pela liderança e
+              criatividade para inspirar e motivar equipes a alcançar seus objetivos, buscando sempre impactar
+              positivamente a vida de outras pessoas.
             </p>
             <div class="row">
               <div class="col-lg-6">
@@ -104,12 +106,17 @@
         </div>
 
         <div class="row">
-          <div *ngFor="let cert of certifications" class="col-lg-5 col-md-6 icon-box" data-aos="fade-up">
+          <div *ngFor="let cert of certifications | slice: 0:indiceCertificados;" class="col-lg-4 col-md-6 icon-box"
+            data-aos="fade-up">
             <div class="icon"><i [class]="cert.icon"></i></div>
             <h4 class="title">{{cert.title}}</h4>
             <p class="description">Obtido em: {{cert.finishedDate}}</p>
             <a *ngIf="cert.url" class="description" target="_blank" [href]="cert.url">Ver Certificado ></a>
           </div>
+        </div>
+        <div *ngIf="indiceCertificados <= certifications.length">
+          <hr>
+          <a (click)="aumentaIndiceCertificados()" type="button" class="btnVerMais btn btn-block">Ver mais <i class="icofont-arrow-down"></i></a>
         </div>
       </div>
     </section>

@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
   jobs: any[] = [];
   projects: any[] = [];
   age: any;
-
-  // TODO: melhorar css e responsividade
-  // TODO: Colocar App Planilhas Loja e Form
+  indiceCertificados = 3;
 
   constructor() { }
 
@@ -46,7 +44,7 @@ export class AppComponent implements OnInit {
         title: 'Tribo Store',
         description: 'Sistema E-Commerce da Tribo que foi projetado para consultar e realizar pedidos na loja. Utilizando uma estrutura REST API, o Back-End foi implementado em Node.js e o Front-End em Angular. Com um pipeline de CI/CD construído através do Github Actions.',
         tecnologies: [
-          'https://img.shields.io/badge/NodeJS-009929?style=for-the-badge&logo=Javascript&logoColor=white',
+          'https://img.shields.io/badge/Node.JS-009929?style=for-the-badge&logo=Javascript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
@@ -84,6 +82,7 @@ export class AppComponent implements OnInit {
         tecnologies: [
           'https://img.shields.io/badge/Csharp-009929?style=for-the-badge&logo=Csharp&logoColor=white',
           'https://img.shields.io/badge/.Net-040B14?style=for-the-badge&logo=Windows&logoColor=white',
+          'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
         url: 'https://github.com/matheuspcouto/AVODAH',
         image: 'assets/img/projetos/Avodah White.png',
@@ -156,12 +155,6 @@ export class AppComponent implements OnInit {
   getCertifications() {
     this.certifications = [
       {
-        title: 'Fundamentos para Desenvolvimento de Software | Microsoft e LinkedIn',
-        icon: 'icofont-brand-microsoft',
-        finishedDate: 'Julho - 2023',
-        url: 'https://www.linkedin.com/learning/certificates/18348bf148e88c4fa136ffbf75a1feb4c8bf6b6d930fd9d651a0acdebb96e852'
-      },
-      {
         title: 'Programação em Java - Básico ao Avançado | Udemy',
         icon: 'icofont-brand-java',
         finishedDate: 'Outubro - 2022',
@@ -186,20 +179,15 @@ export class AppComponent implements OnInit {
         url: 'https://udemy.com/certificate/UC-9493b3e3-8172-4b85-8968-c6e7493d93ff/'
       },
       {
-        title: 'Desenvolvimento Web Completo | Udemy',
-        icon: 'icofont-code-alt',
-        finishedDate: 'Janeiro - 2023',
-        url: 'https://udemy.com/certificate/UC-4601788e-45e3-4e71-accd-605b4e735b1e/'
-      },
-      {
         title: 'Academia Angular | Impacta',
         icon: 'icofont-file-javascript',
         finishedDate: 'Novembro - 2021',
       },
       {
-        title: 'SQL Completo | Softblue',
-        icon: 'icofont-database',
-        finishedDate: 'Junho - 2019',
+        title: 'Desenvolvimento Web Completo | Udemy',
+        icon: 'icofont-code-alt',
+        finishedDate: 'Janeiro - 2023',
+        url: 'https://udemy.com/certificate/UC-4601788e-45e3-4e71-accd-605b4e735b1e/'
       },
       {
         title: 'Git Completo | Udemy',
@@ -212,6 +200,17 @@ export class AppComponent implements OnInit {
         icon: 'icofont-automation',
         finishedDate: 'Junho - 2023',
         url: 'https://www.udemy.com/certificate/UC-d1ef9257-c9ed-4253-af57-1228cc4dc14f/'
+      },
+      {
+        title: 'SQL Completo | Softblue',
+        icon: 'icofont-database',
+        finishedDate: 'Junho - 2019',
+      },
+      {
+        title: 'Fundamentos para Desenvolvimento de Software | Microsoft e LinkedIn',
+        icon: 'icofont-brand-microsoft',
+        finishedDate: 'Julho - 2023',
+        url: 'https://www.linkedin.com/learning/certificates/18348bf148e88c4fa136ffbf75a1feb4c8bf6b6d930fd9d651a0acdebb96e852'
       },
       {
         title: 'Inglês Intermediário (B1) | Education First',
@@ -281,5 +280,9 @@ export class AppComponent implements OnInit {
         itens: ['Inglês - Intermediário (B1)'],
       },
     ];
+  }
+
+  aumentaIndiceCertificados() {
+    this.indiceCertificados += 3;
   }
 }

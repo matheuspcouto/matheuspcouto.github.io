@@ -23,7 +23,8 @@ h6 {
 @media (max-width: 1199px) {
   #header {
     left: -300px;
-}
+  }
+
   #main {
     margin-left: 0;
   }
@@ -468,19 +469,24 @@ section {
     width: 350px !important;
     max-height: 850px !important;
   }
+
   .img-fluid-project {
     max-height: 300px !important;
   }
+
   .mobile {
     display: flex;
   }
+
   .desktop {
     display: none;
   }
+
   .tecnologies {
     margin-bottom: 5px;
     border-radius: 5px;
   }
+
   .stacks {
     display: block;
     margin-top: -35px;
@@ -491,6 +497,7 @@ section {
   .desktop {
     display: flex;
   }
+
   .mobile {
     display: none;
   }
@@ -541,6 +548,12 @@ section {
 /*--------------------------------------------------------------
 # certifications
 --------------------------------------------------------------*/
+
+.btnVerMais {
+  font-family: 'Poppins', sans-serif;
+  color: #343a40;
+  text-decoration: none;
+}
 
 .certifications .icon-box {
   margin-bottom: 20px;
@@ -869,6 +882,7 @@ section {
   width: 80px;
   height: 80px;
 }
+
 .lds-ellipsis div {
   position: absolute;
   top: 33px;
@@ -878,18 +892,22 @@ section {
   background: white;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
+
 .lds-ellipsis div:nth-child(1) {
   left: 8px;
   animation: lds-ellipsis1 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(2) {
   left: 8px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(3) {
   left: 32px;
   animation: lds-ellipsis2 0.6s infinite;
 }
+
 .lds-ellipsis div:nth-child(4) {
   left: 56px;
   animation: lds-ellipsis3 0.6s infinite;
@@ -899,22 +917,27 @@ section {
   0% {
     transform: scale(0);
   }
+
   100% {
     transform: scale(1);
   }
 }
+
 @keyframes lds-ellipsis3 {
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(0);
   }
 }
+
 @keyframes lds-ellipsis2 {
   0% {
     transform: translate(0, 0);
   }
+
   100% {
     transform: translate(24px, 0);
   }
