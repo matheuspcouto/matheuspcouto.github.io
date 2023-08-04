@@ -179,6 +179,18 @@ export class AppComponent implements OnInit {
         url: 'https://udemy.com/certificate/UC-9493b3e3-8172-4b85-8968-c6e7493d93ff/'
       },
       {
+        title: 'Testes Unitários em Java: JUnit, Mockito e TDD | Udemy',
+        icon: 'icofont-brand-java',
+        finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-c1da9160-5c04-4197-87d8-0a5b2b2d1d4c/'
+      },
+      {
+        title: 'Unit Testing for Typescript & NodeJs Developers with Jest | Udemy',
+        icon: 'icofont-file-javascript',
+        finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-a470165f-fc55-40c0-a3ad-849931e5e865/'
+      },
+      {
         title: 'Academia Angular | Impacta',
         icon: 'icofont-file-javascript',
         finishedDate: 'Novembro - 2021',
@@ -202,6 +214,24 @@ export class AppComponent implements OnInit {
         url: 'https://www.udemy.com/certificate/UC-d1ef9257-c9ed-4253-af57-1228cc4dc14f/'
       },
       {
+        title: 'Microsoft Azure: The Complete Guide | Udemy',
+        icon: 'icofont-brand-microsoft',
+        finishedDate: 'Julho - 2023',
+        url: 'https://udemy.com/certificate/UC-1293e798-05f5-488d-9671-1713dfa4bc98/'
+      },
+      {
+        title: 'HPE Fortify - Secure Code Analysis | Udemy',
+        icon: 'icofont-ssl-security',
+        finishedDate: 'Outubro - 2022',
+        url: 'https://www.udemy.com/certificate/UC-540949bf-da50-481a-9ebd-b5bb34020db7/'
+      },
+      {
+        title: 'Postman: The Complete Guide | Udemy',
+        icon: 'icofont-globe',
+        finishedDate: 'Outubro - 2022',
+        url: 'https://udemy.com/certificate/UC-7d30b94e-831b-46d4-a967-0d5f465be054/'
+      },
+      {
         title: 'SQL Completo | Softblue',
         icon: 'icofont-database',
         finishedDate: 'Junho - 2019',
@@ -211,6 +241,17 @@ export class AppComponent implements OnInit {
         icon: 'icofont-brand-microsoft',
         finishedDate: 'Julho - 2023',
         url: 'https://www.linkedin.com/learning/certificates/18348bf148e88c4fa136ffbf75a1feb4c8bf6b6d930fd9d651a0acdebb96e852'
+      },
+      {
+        title: 'Introduction to Software Engineering - IBM | Coursera',
+        icon: 'icofont-brand-ibm',
+        finishedDate: 'Outubro - 2022',
+        url: 'https://www.coursera.org/account/accomplishments/verify/NCVMRT355WXU'
+      },
+      {
+        title: 'Lógica de Programação | Softblue',
+        icon: 'icofont-computer',
+        finishedDate: 'Novembro - 2020',
       },
       {
         title: 'Inglês Intermediário (B1) | Education First',
@@ -226,7 +267,7 @@ export class AppComponent implements OnInit {
       '> Java',
       '- SpringBoot',
       '- JSF | JPA | JSP',
-      '> Node',
+      '> NodeJS',
       '- ExpressJS | TypeScript',
     ];
 
