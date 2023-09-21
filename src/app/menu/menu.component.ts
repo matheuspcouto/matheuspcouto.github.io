@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.itensMenu = [
-      { title: 'Início', tooltipTitle: 'Início', route:'https://matheuspcouto.github.io/', icon:'bx bx-home', isActive: true },
+      { title: 'Início', tooltipTitle: 'Início', route:'#hero', icon:'bx bx-home', isActive: true },
       { title: 'Sobre', tooltipTitle: 'Sobre', route:'#sobre', icon:'bx bx-user', isActive: false },
       { title: 'Habilidades', tooltipTitle: 'Habilidades', route:'#habilidades', icon:'bx bx-book-reader', isActive: false },
       { title: 'Certificações', tooltipTitle: 'Cursos & Certificações', route:'#certifications', icon:'bx bx-certification', isActive: false },
