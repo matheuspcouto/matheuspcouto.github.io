@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
       },
       {
         title: 'Portfólio - Matheus Pimentel',
-        description: 'Meu portfólio online é uma plataforma que reflete minha trajetória profissional. Nele, destaco minha carreira e formação, exibo meus certificados e habilidades, e apresento com orgulho os projetos em que trabalhei. Por meio desse portfólio, busco transmitir minha paixão pela área de tecnologia e minha dedicação em criar soluções inovadoras e impactantes.',
+        description: 'Meu portfólio tem o objetivo de destacar minha trajetória profissional e formação, onde exibo meus certificados e habilidades, e apresento com orgulho os projetos em que trabalhei. Por meio desse dele, busco transmitir minha paixão pela área de tecnologia e minha dedicação em criar soluções inovadoras e impactantes.',
         tecnologies: [
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
