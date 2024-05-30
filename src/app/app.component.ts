@@ -41,6 +41,18 @@ export class AppComponent implements OnInit {
   getProjects() {
     this.projects = [
       {
+        title: 'Site IMEP',
+        description: 'Site institucional da Igreja Metodista em Palmas, desenvolvido em Angular, com o objetivo de apresentar a igreja, seus ministérios e eventos. O site conta com um painel administrativo para gerenciamento de conteúdo, e foi construído com um pipeline de CI/CD através do Github Actions.',
+        tecnologies: [
+          'https://img.shields.io/badge/Node.JS-009929?style=for-the-badge&logo=Javascript&logoColor=white',
+          'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
+          'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
+        ],
+        url: 'https://igrejametodistapalmas.vercel.app',
+        image: 'assets/img/projetos/site-imep.png',
+        class: 'project-text w-100 my-auto text-center text-lg-left',
+      },
+      {
         title: 'Tribo Store',
         description: 'Sistema E-Commerce da Tribo que foi projetado para consultar e realizar pedidos na loja. Utilizando uma estrutura REST API, o Back-End foi implementado em Node.js e o Front-End em Angular. Com um pipeline de CI/CD construído através do Github Actions.',
         tecnologies: [
