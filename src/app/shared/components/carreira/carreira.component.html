@@ -1,0 +1,47 @@
+<!-- ======= Experiencia e Formação Section ======= -->
+<section class="carreira">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Minha Carreira</h2>
+    </div>
+
+    <mpc-tabs [tabs]="abas" (tabSelected)="abaSelecionada = $event"></mpc-tabs>
+
+    <div class="row">
+      @if (abaSelecionada?.id === 'formacao-academica') {
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="carreira-titulo">Formação Acadêmica</h3>
+        <div class="carreira-item">
+          <h4>Bacharelado em Sistemas de Informação</h4>
+          <p><em>Universidade Estadual do Tocantins - UNITINS</em></p>
+          <p>Palmas - Tocantins</p>
+          <h5>2018 - 2021</h5>
+        </div>
+      </div>
+      }
+
+      @if (abaSelecionada?.id === 'experiencia-profissional') {
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="carreira-titulo">Experiência Profissional</h3>
+        <div class="carreira-item">
+          @for (trabalho of trabalhos; track $index) {
+          <mpc-card-evento [dia]="trabalho.mesEntrada" [mes]="trabalho.anoEntrada">
+            <div card-body>
+              <h4>{{ trabalho.titulo }}</h4>
+              <p>{{ trabalho.empresa }}</p>
+              <ul>
+                @for (atividade of trabalho.atividades; track $index) {
+                <li>{{atividade}}</li>
+                }
+              </ul>
+            </div>
+          </mpc-card-evento>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+<!-- End Experiencia e Formação Section -->

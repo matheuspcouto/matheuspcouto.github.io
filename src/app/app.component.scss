@@ -1,0 +1,105 @@
+#navbar {
+  /* Cores */
+  --mpc-color-bg-header: white;
+  --mpc-color-text-disabled: var(--color-tertiary);
+  --mpc-color-text-active: var(--color-primary);
+  --mpc-color-text-hover: var(--color-primary);
+  --mpc-color-border-active: var(--color-secondary);
+
+  /* Fontes */
+  --mpc-font-navbar: var(--font-subtitle);
+}
+
+#loader-exemplo {
+  /* Cores */
+  --mpc-bg-loader: white;
+  --mpc-color-loader: var(--color-primary);
+}
+
+#btn-scroll-top {
+  --mpc-btn-float-bg: var(--color-secondary);
+  --mpc-btn-float-color: white;
+}
+
+// ===== HERO SECTION =====
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("/assets/img/mountain.jpg") top center;
+  background-size: cover;
+
+  &:before {
+    content: "";
+    background: $hero-bg-overlay;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+  }
+
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $text-color-primary;
+  }
+
+  h3 {
+    margin: 0 0 10px 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+    color: $text-color-primary;
+
+    span {
+      border-bottom: 3px solid #149ddd;
+    }
+  }
+}
+
+#hero p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero p span {
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

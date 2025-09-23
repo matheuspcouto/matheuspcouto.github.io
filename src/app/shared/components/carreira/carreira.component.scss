@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# carreira
+--------------------------------------------------------------*/
+
+.carreira {
+
+  .carreira-titulo {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .carreira-item {
+
+    h4 {
+      line-height: 18px;
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      padding-bottom: 10px;
+    }
+  }
+}

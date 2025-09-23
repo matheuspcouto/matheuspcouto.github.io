@@ -1,0 +1,25 @@
+<section class="projetos">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Meus Projetos</h2>
+    </div>
+
+    <div class="container">
+      @for (projeto of projetos; track $index) {
+      <div class="col-lg-4 mb-3" data-aos="fade-up">
+        <mpc-card [imagem]="projeto.imagem" [links]="getLinkProjeto(projeto)">
+          <div card-body>
+            <h3>{{ projeto.titulo }}</h3>
+            <p>{{ projeto.descricao }}</p>
+            @for (tec of projeto.tecnologias; track $index) {
+            <img [src]="tec" class="tecnologias" />
+            }
+          </div>
+        </mpc-card>
+      </div>
+      }
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<!-- ======= Certificações Section ======= -->
+<section class="certifications">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Cursos & Certificações</h2>
+    </div>
+
+    <div class="row">
+      @for (cert of certificacoes | slice: 0:indiceCertificados; track $index) {
+      <mpc-card-menu [icone]="cert.icone" data-aos="fade-up">
+        <div card-body>
+          <h3>{{ cert.titulo }}</h3>
+          <p>Obtido em: {{ cert.dataFinalizacao }}</p>
+          @if (cert.url) {
+          <a target="_blank" [href]="cert.url">Ver Certificado -></a>
+          }
+        </div>
+      </mpc-card-menu>
+      }
+    </div>
+
+    @if (indiceCertificados <= certificacoes.length) {
+      <hr>
+      <mpc-button (click)="aumentaIndiceCertificados()" texto="Ver mais" icone="icofont-arrow-down"
+        posicaoIcone="esquerda" />
+      }
+
+  </div>
+</section>
+<!-- End Certificações Section -->

@@ -1,0 +1,23 @@
+<section class="habilidades">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Habilidades</h2>
+    </div>
+
+    <div class="row">
+      @for (habilidade of habilidades; track $index) {
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="count-box">
+          <i [class]="habilidade.icone"></i>
+          <span class="section-title">{{habilidade.titulo}}</span>
+          @for (item of habilidade.itens; track $index) {
+          <p>{{ item }}</p>
+          }
+        </div>
+      </div>
+      }
+
+    </div>
+  </div>
+</section>
