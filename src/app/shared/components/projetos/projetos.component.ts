@@ -46,7 +46,7 @@ export class ProjetosComponent {
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
-        url: 'https://matheuspcouto.github.io',
+        url: 'https://matheuspcouto.dev',
         imagem: 'assets/img/projetos/portfolio.png',
       },
       {
@@ -58,7 +58,7 @@ export class ProjetosComponent {
           'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
-        url: 'https://matheuspcouto.github.io/portfolio-havyla',
+        url: 'https://matheuspcouto.dev/portfolio-havyla',
         imagem: 'assets/img/projetos/havyla.png',
       },
       /* {
