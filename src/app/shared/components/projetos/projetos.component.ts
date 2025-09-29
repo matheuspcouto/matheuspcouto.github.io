@@ -46,7 +46,7 @@ export class ProjetosComponent {
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
-        url: 'https://matheuspcouto.dev',
+        url: 'https://matheuspcouto-dev.vercel.app/',
         imagem: 'assets/img/projetos/portfolio.png',
       },
       {
