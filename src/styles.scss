@@ -43,6 +43,7 @@
 
 body {
   font-family: var(--font-subtitle);
+  color: var(--color-primary);
   overflow: auto !important;
 
   @media screen and (min-width: 992px) {
@@ -63,7 +64,7 @@ body {
       overflow: hidden;
 
       .section-title {
-        padding-bottom: 30px;
+        padding-bottom: 1rem;
 
         h2 {
           font-size: 32px;

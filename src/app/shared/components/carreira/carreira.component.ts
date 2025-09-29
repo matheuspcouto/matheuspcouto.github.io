@@ -27,8 +27,8 @@ export class CarreiraComponent {
    * @type {Tab[]}
    */
   protected abas: Tab[] = [
-    { id: 'experiencia-profissional', titulo: 'Experiência Profissional' },
-    { id: 'formacao-academica', titulo: 'Formação Acadêmica' }
+    { id: 'experiencia-profissional', titulo: 'Profissional' },
+    { id: 'formacao-academica', titulo: 'Acadêmica' }
   ];
 
   /**

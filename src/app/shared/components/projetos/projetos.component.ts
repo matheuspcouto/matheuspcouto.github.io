@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardLinks, MpcCardComponent } from 'mpc-lib-angular';
+import { MpcCardComponent, MpcButtonComponent } from 'mpc-lib-angular';
 
 interface Projeto {
   titulo: string;
@@ -11,7 +11,7 @@ interface Projeto {
 
 @Component({
   selector: 'projetos',
-  imports: [MpcCardComponent],
+  imports: [MpcCardComponent, MpcButtonComponent],
   templateUrl: './projetos.component.html',
   styleUrls: ['./projetos.component.scss']
 })
@@ -84,15 +84,12 @@ export class ProjetosComponent {
   }
 
   /**
-   * Retorna o link do projeto, se houver URL cadastrada.
-   * @param {Projeto} projeto a ser avaliado
-   * @returns {CardLinks[]} Lista de links de contato
+   * Redireciona para a URL do projeto em uma nova aba.
+   * @param {Projeto} projeto a ser aberto
    */
-  protected getLinkProjeto(projeto: Projeto): CardLinks[] {
+  protected irParaProjeto(projeto: Projeto): void {
     if (projeto.url) {
-      const URL: CardLinks = { url: projeto.url, icone: "bi bi-link" }
-      return [URL];
+      window.open(projeto.url, '_blank');
     }
-    return [];
   }
 }

@@ -17,4 +17,10 @@
     margin-left: 5px;
     border-radius: 5px;
   }
+
+  .btn-projeto {
+    --mpc-bg-color-btn: var(--color-secondary);
+    --mpc-text-color-btn: white;
+    --mpc-bg-color-btn-hover: var(--color-primary);
+  }
 }

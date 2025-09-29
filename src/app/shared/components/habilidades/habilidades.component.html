@@ -1,4 +1,4 @@
-<section class="habilidades">
+<section class="habilidades" id="habilidades">
   <div class="container">
 
     <div class="section-title">
@@ -10,7 +10,7 @@
       <div class="col-lg-4" data-aos="fade-up">
         <div class="content">
           <i [class]="habilidade.icone"></i>
-          <span class="section-title">{{ habilidade.titulo }}</span>
+          <span>{{ habilidade.titulo }}</span>
           @for (item of habilidade.itens; track $index) {
           <p>{{ item }}</p>
           }
