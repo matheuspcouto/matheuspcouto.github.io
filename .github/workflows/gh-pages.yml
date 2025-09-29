@@ -1,0 +1,139 @@
+name: Deploy on GitHub Pages
+
+on:
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: "18.x"
+  BASE_HREF: "/"
+  DIST_DIR: "dist/matheuspcouto.github.io"
+
+jobs:
+  # Validação inicial e setup
+  validate:
+    name: Validate Environment
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should-deploy: ${{ steps.check.outputs.should-deploy }}
+    steps:
+      - name: Check Required GitHub Token
+        id: check
+        run: |
+          if [[ -z "${{ secrets.GITHUB_TOKEN }}" ]]; then
+            echo "❌ Missing required GITHUB_TOKEN"
+            echo "should-deploy=false" >> $GITHUB_OUTPUT
+            exit 1
+          else
+            echo "✅ GITHUB_TOKEN is present"
+            echo "should-deploy=true" >> $GITHUB_OUTPUT
+          fi
+
+  # Build, testes e validações
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    needs: validate
+    if: needs.validate.outputs.should-deploy == 'true'
+    outputs:
+      build-success: ${{ steps.build-status.outputs.success }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Verify Node and npm versions
+        run: |
+          echo "Node version: $(node --version)"
+          echo "NPM version: $(npm --version)"
+
+      - name: Install Dependencies
+        run: |
+          npm install --prefer-offline --no-audit
+          echo "✅ Dependencies installed successfully"
+
+      - name: Build Angular Application
+        id: build
+        run: |
+          if npm run build -- --base-href="${{ env.BASE_HREF }}"; then
+            echo "✅ Build completed successfully"
+            echo "BUILD_SUCCESS=true" >> $GITHUB_ENV
+          else
+            echo "❌ Build failed"
+            echo "BUILD_SUCCESS=false" >> $GITHUB_ENV
+            exit 1
+          fi
+
+      - name: Set Build Status
+        id: build-status
+        run: echo "success=${{ env.BUILD_SUCCESS }}" >> $GITHUB_OUTPUT
+
+      - name: Upload Build Artifacts
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: angular-build-artifacts
+          path: ${{ env.DIST_DIR }}
+          retention-days: 1
+
+  # Deploy para GitHub Pages
+  deploy-github-pages:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: [validate, build-and-test]
+    if: needs.build-and-test.outputs.build-success == 'true'
+    concurrency:
+      group: github-pages-deployment
+      cancel-in-progress: true
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "npm"
+
+      - name: Install angular-cli-ghpages
+        run: |
+          npm install -g angular-cli-ghpages
+          echo "✅ angular-cli-ghpages installed successfully"
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: angular-build-artifacts
+          path: ${{ env.DIST_DIR }}
+
+      - name: Verify Build Artifacts
+        run: |
+          if [ -d "${{ env.DIST_DIR }}" ] && [ "$(ls -A ${{ env.DIST_DIR }})" ]; then
+            echo "✅ Build artifacts found"
+            ls -la ${{ env.DIST_DIR }}
+          else
+            echo "❌ No build artifacts found"
+            exit 1
+          fi
+
+      - name: Deploy to GitHub Pages
+        id: deploy
+        run: |
+          npx angular-cli-ghpages --dir=${{ env.DIST_DIR }} --no-silent
+          echo "✅ Deployment to GitHub Pages completed successfully"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deploy Summary
+        if: success()
+        run: |
+          echo "🚀 Application deployed successfully!"
+          echo "📍 Site URL: https://matheuspcouto.github.io/"
+          echo "🌟 Deployment completed at: $(date)"
