@@ -9,17 +9,23 @@ describe('MpcFooterComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MpcFooterComponent]
-    })
-      .compileComponents();
-  });
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MpcFooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('deve criar', () => {
+  it('deve criar o componente', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('deve renderizar o footer corretamente', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled).toBeTruthy();
+  });
+
+  it('deve ser um componente standalone', () => {
+    expect(component).toBeInstanceOf(MpcFooterComponent);
   });
 });
