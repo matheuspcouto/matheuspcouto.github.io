@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { MpcCardComponent, MpcButtonComponent } from 'mpc-lib-angular';
 
+/**
+ * Interface que representa um projeto.
+ * @interface Projeto
+ */
 interface Projeto {
   titulo: string;
   descricao: string;

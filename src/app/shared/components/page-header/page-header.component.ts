@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'page-header',
@@ -6,16 +6,26 @@ import { Component, Input, OnInit, OnDestroy, ElementRef, ViewChild } from '@ang
   styleUrls: ['./page-header.component.scss'],
 })
 export class PageHeaderComponent implements OnInit, OnDestroy {
-  textoDigitado: string[] = ['Hello World !'];
 
+  /** Textos a serem digitados na animação */
+  private textoDigitado: string[] = ['Hello World !'];
+
+  /** Referência ao elemento onde o texto será digitado */
   @ViewChild('typedElement', { static: true }) typedElement!: ElementRef;
 
+  /** Instância do timeout para a animação de digitação */
   private typedInstance: any;
+  /** Índice atual do texto sendo digitado */
   private currentIndex = 0;
+  /** Texto atualmente exibido */
   private currentText = '';
+  /** Indica se o texto está sendo apagado */
   private isDeleting = false;
+  /** Velocidade de digitação e apagamento */
   private typeSpeed = 100;
+  /** Velocidade de apagamento */
   private deleteSpeed = 50;
+  /** Tempo de pausa ao finalizar a digitação de uma palavra */
   private pauseTime = 2000;
 
   ngOnInit() {
@@ -28,6 +38,9 @@ export class PageHeaderComponent implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Inicia o efeito de digitação no elemento referenciado.
+   */
   private startTypingEffect(): void {
     const element = this.typedElement.nativeElement;
     const fullText = this.textoDigitado[this.currentIndex];

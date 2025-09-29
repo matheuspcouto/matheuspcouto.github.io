@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+/**
+ * Interface que representa uma habilidade.
+ * @interface Habilidade
+ */
 interface Habilidade {
   titulo: string;
   icone: string;

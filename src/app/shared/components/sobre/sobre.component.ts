@@ -15,6 +15,9 @@ export class SobreComponent {
    */
   protected age: number = new Date().getFullYear() - 2000;
 
+  /**
+   * Cria uma instância do componente SobreComponent e calcula a idade.
+   */
   constructor() {
     const now = new Date();
     const dataNasc = new Date('2000-05-23');
@@ -29,14 +32,14 @@ export class SobreComponent {
   /**
    * Abre o currículo em português em uma nova aba.
    */
-  public verCurriculoPT(): void {
+  protected verCurriculoPT(): void {
     window.open('https://www.canva.com/design/DAF-pR8ynQw/2daYc25BT31YuFiDKvtJjw/view', '_blank');
   }
 
   /**
    * Abre o currículo em inglês em uma nova aba.
    */
-  public verCurriculoEN(): void {
+  protected verCurriculoEN(): void {
     window.open('https://www.canva.com/design/DAF-pdf-9Es/GB2dltpM5DV3zNJbiT4w6A/view', '_blank');
   }
 }

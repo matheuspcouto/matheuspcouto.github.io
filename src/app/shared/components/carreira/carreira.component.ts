@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { MpcCardEventoComponent, MpcTabsComponent, Tab } from 'mpc-lib-angular';
 
+/**
+ * Interface que representa uma experiência de trabalho.
+ * @interface Trabalho
+ */
 interface Trabalho {
   titulo: string;
   periodo: string;

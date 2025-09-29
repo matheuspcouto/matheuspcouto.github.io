@@ -51,12 +51,6 @@ export class AppComponent implements OnInit {
   private readonly loaderService: MpcLoaderService = inject(MpcLoaderService);
 
   /**
-   * Define visualização do botão de voltar ao topo.
-   * @type {boolean}
-   */
-  protected showScrollTop: boolean = false;
-
-  /**
    * Abas de navegação exibidas na barra superior.
    * @type {NavbarConfig[]}
    */
@@ -79,11 +73,6 @@ export class AppComponent implements OnInit {
     this.loaderService.show();
 
     if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('scroll', () => {
-        const scrollPosition = window.scrollY;
-        this.showScrollTop = scrollPosition > 300;
-      });
-
       this.router.events.subscribe(event => {
         if (event instanceof NavigationEnd) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -98,16 +87,16 @@ export class AppComponent implements OnInit {
       mirror: false
     });
 
-     setTimeout(() => this.loaderService.hide(), 2000);
+    setTimeout(() => this.loaderService.hide(), 2000);
   }
 
   /**
-   * Realiza a rolagem suave para o topo da página.
+   * Abre o WhatsApp em uma nova aba para contato.
    * @returns {void}
    */
-  protected scrollToTop(): void {
+  protected abrirWhatsApp(): void {
     if (isPlatformBrowser(this.platformId)) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.open('https://wa.me/55639992014337', '_blank');
     }
   }
 }

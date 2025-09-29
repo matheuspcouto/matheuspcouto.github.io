@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { MpcCardMenuComponent } from 'mpc-lib-angular';
 
+/**
+ * Interface padrão para os artigos.
+ * @interface Artigo
+ */
 interface Artigo {
   titulo: string;
   dataPublicacao: string;

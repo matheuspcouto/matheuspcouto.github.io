@@ -2,6 +2,10 @@ import { SlicePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { MpcCardMenuComponent, MpcButtonComponent } from "mpc-lib-angular";
 
+/**
+ * Interface que representa uma certificação.
+ * @interface Certificacao
+ */
 interface Certificacao {
   titulo: string;
   icone: string;
