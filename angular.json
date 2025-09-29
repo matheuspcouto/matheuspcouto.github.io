@@ -91,6 +91,9 @@
           "options": {
             "tsConfig": "tsconfig.spec.json"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
