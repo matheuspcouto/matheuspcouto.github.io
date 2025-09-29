@@ -11,7 +11,6 @@ interface Projeto {
 
 @Component({
   selector: 'projetos',
-  standalone: true,
   imports: [MpcCardComponent],
   templateUrl: './projetos.component.html',
   styleUrls: ['./projetos.component.scss']
@@ -28,9 +27,8 @@ export class ProjetosComponent {
     this.projetos = [
       {
         titulo: 'Site IMEP',
-        descricao: 'Site institucional da Igreja Metodista em Palmas, desenvolvido em Angular, com o objetivo de apresentar a igreja, seus ministérios e eventos. O site conta com um painel administrativo para gerenciamento de conteúdo, e foi construído com um pipeline de CI/CD através do Github Actions.',
+        descricao: 'Site institucional da Igreja Metodista em Palmas, desenvolvido em Angular,\ncom o objetivo de apresentar a igreja, seus ministérios e eventos.\nO site conta com um painel administrativo para gerenciamento de conteúdo,\ne foi construído com um pipeline de CI/CD através do Github Actions.\nUma solução completa para comunicação digital da instituição religiosa.',
         tecnologias: [
-          'https://img.shields.io/badge/Node.JS-009929?style=for-the-badge&logo=Javascript&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
@@ -39,7 +37,7 @@ export class ProjetosComponent {
       },
       {
         titulo: 'Portfólio - Matheus Pimentel',
-        descricao: 'Meu portfólio tem o objetivo de destacar minha trajetória profissional e formação, onde exibo meus certificados e habilidades, e apresento com orgulho os projetos em que trabalhei. Por meio desse dele, busco transmitir minha paixão pela área de tecnologia e minha dedicação em criar soluções inovadoras e impactantes.',
+        descricao: 'Meu portfólio tem o objetivo de destacar minha trajetória profissional e formação ao longo dos anos.\nApresento com orgulho os projetos em que trabalhei e as tecnologias utilizadas.\nPor meio dele, busco transmitir minha paixão pela área de tecnologia\ne minha dedicação em criar soluções inovadoras e impactantes.',
         tecnologias: [
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
@@ -49,7 +47,7 @@ export class ProjetosComponent {
       },
       {
         titulo: 'Portfólio - Hávyla Ferreira',
-        descricao: 'Portfólio online da profissional de Recursos Humanos, Hávyla Ferreira Souza. Desenvolvido em HTML, CSS e Javascript, o site apresenta a trajetória profissional da Hávyla, suas experiências e habilidades.',
+        descricao: 'Portfólio online da profissional de Recursos Humanos, Hávyla Ferreira Souza.\nDesenvolvido utilizando tecnologias web modernas como HTML5, CSS3 e Javascript.\nO site apresenta de forma elegante a trajetória profissional da Hávyla,\nsuas experiências acumuladas e principais habilidades desenvolvidas na área.\nUma vitrine digital que destaca sua expertise em gestão de pessoas.',
         tecnologias: [
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
@@ -59,7 +57,7 @@ export class ProjetosComponent {
         url: 'https://matheuspcouto.github.io/portfolio-havyla',
         imagem: 'assets/img/projetos/havyla.png',
       },
-      {
+      /* {
         titulo: 'Avodah Escalas',
         descricao: 'Projeto de gestão e geração de escalas desenvolvido como TCC em Sistemas de Informação para a Igreja Metodista em Palmas, o qual recebeu uma nota perfeita em sua apresentação. O mesmo oferece facilitar a organização de escalas de forma flexível, permitindo uma melhor gestão das atividades dentro da igreja.',
         tecnologias: [
@@ -69,18 +67,18 @@ export class ProjetosComponent {
         ],
         url: 'https://github.com/matheuspcouto/AVODAH',
         imagem: 'assets/img/projetos/Avodah White.png',
-      },
+      }, */
       {
         titulo: 'IrrIot - Sistema de Irrigação Inteligente',
         descricao:
-          'O projeto apresentado na Feira Agrotins de 2019 consiste em uma integração entre Arduino e plataforma Java Web para monitoramento e controle eficiente de sistema de irrigação. Essa solução inovadora permite economia de recursos e precisão no processo de irrigação, garantindo o uso otimizado de água para a produção agrícola.',
+          'Projeto inovador apresentado na Feira Agrotins de 2019, que consiste em uma\nintegração inteligente entre Arduino e plataforma Java Web para monitoramento.\nPermite controle eficiente de sistema de irrigação com economia de recursos.\nEssa solução tecnológica garante precisão no processo de irrigação automatizada,\noptimizando o uso de água para a produção agrícola sustentável.',
         tecnologias: [
           'https://img.shields.io/badge/Java-F7F7F7?style=for-the-badge&logo=CoffeeScript&logoColor=black',
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
         ],
         url: 'https://github.com/matheuspcouto/Projeto-Irrigacao',
-        imagem: 'assets/img/projetos/irriot.jfif',
+        imagem: 'assets/img/projetos/irriot.png',
       },
     ];
   }

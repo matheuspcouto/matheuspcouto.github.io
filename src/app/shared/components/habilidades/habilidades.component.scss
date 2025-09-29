@@ -3,10 +3,10 @@
 --------------------------------------------------------------*/
 
 .habilidades {
-  padding-bottom: 30px;
+  background-color: var(--color-tertiary);
 
-  .count-box {
-    padding: 30px;
+  .content {
+    padding: 1rem;
     width: 100%;
 
     i {
@@ -18,7 +18,6 @@
 
     span {
       font-size: 48px;
-      line-height: 40px;
       display: block;
       font-weight: 700;
       margin-left: 60px;
@@ -29,7 +28,6 @@
       padding: 15px 0 0 0;
       margin: 0 0 0 60px;
       font-size: 14px;
-      color: var(--color-primary);
     }
   }
 }

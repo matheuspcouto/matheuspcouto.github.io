@@ -5,9 +5,9 @@
       <h2>Meus Projetos</h2>
     </div>
 
-    <div class="container">
+    <div class="row">
       @for (projeto of projetos; track $index) {
-      <div class="col-lg-4 mb-3" data-aos="fade-up">
+      <div class="col-lg-6 my-3" data-aos="fade-up">
         <mpc-card [imagem]="projeto.imagem" [links]="getLinkProjeto(projeto)">
           <div card-body>
             <h3>{{ projeto.titulo }}</h3>

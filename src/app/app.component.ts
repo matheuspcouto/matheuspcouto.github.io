@@ -1,32 +1,32 @@
 import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { MpcBtnFloatComponent, MpcLoaderComponent, MpcNavbarComponent, MpcPageHeaderHomeComponent, NavbarConfig } from 'mpc-lib-angular';
+import { isPlatformBrowser } from '@angular/common';
 import { NavigationEnd, Router } from '@angular/router';
-import { Rotas } from './shared/enums/rotas-enum';
 import { ArtigosComponent } from './shared/components/artigos/artigos.component';
 import { CarreiraComponent } from './shared/components/carreira/carreira.component';
 import { CertificacoesComponent } from './shared/components/certificacoes/certificacoes.component';
 import { HabilidadesComponent } from './shared/components/habilidades/habilidades.component';
-import { MpcFooterComponent } from './shared/components/mpc-footer/mpc-footer.component';
+import { PageHeaderComponent } from './shared/components/page-header/page-header.component';
 import { ProjetosComponent } from './shared/components/projetos/projetos.component';
 import { SobreComponent } from './shared/components/sobre/sobre.component';
+import { MpcBtnFloatComponent, MpcLoaderComponent, NavbarConfig, MpcNavbarComponent, MpcLoaderService } from 'mpc-lib-angular';
+import AOS from 'aos';
+import { Rotas } from './shared/enums/rotas-enum';
+import { MpcFooterComponent } from './shared/components/mpc-footer/mpc-footer.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
-    CommonModule,
+    PageHeaderComponent,
     SobreComponent,
     HabilidadesComponent,
     CertificacoesComponent,
     ArtigosComponent,
     CarreiraComponent,
     ProjetosComponent,
-    MpcPageHeaderHomeComponent,
     MpcNavbarComponent,
     MpcFooterComponent,
     MpcLoaderComponent,
-    MpcBtnFloatComponent
+    MpcBtnFloatComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -45,10 +45,10 @@ export class AppComponent implements OnInit {
   private readonly router: Router = inject(Router);
 
   /**
-   * Define estado de carregamento da aplicação.
+   * Controla o estado de carregamento da aplicação.
    * @type {boolean}
    */
-  protected carregando: boolean = false;
+  private readonly loaderService: MpcLoaderService = inject(MpcLoaderService);
 
   /**
    * Define visualização do botão de voltar ao topo.
@@ -68,16 +68,6 @@ export class AppComponent implements OnInit {
     { id: 'artigos', titulo: 'Artigos', rota: Rotas.ARTIGOS, icone: 'bi bi-journal-text' },
     { id: 'carreira', titulo: 'Carreira', rota: Rotas.CARREIRA, icone: 'bi bi-briefcase-fill' },
     { id: 'projetos', titulo: 'Projetos', rota: Rotas.PROJETOS, icone: 'bi bi-folder-fill' },
-    { id: 'contato', titulo: 'Contato', rota: Rotas.CONTATO, icone: 'bi bi-envelope-fill' },
-    {
-      id: 'curriculo',
-      titulo: 'Currículo',
-      icone: 'bi bi-filetype-html',
-      subRotas: [
-        { id: 'pt-br', titulo: 'PT-BR', rota: '' },
-        { id: 'en-us', titulo: 'EN-US', rota: '' },
-      ]
-    },
   ];
 
   /**
@@ -85,7 +75,9 @@ export class AppComponent implements OnInit {
    * @returns {void}
    */
   ngOnInit(): void {
-    this.carregando = true;
+
+    this.loaderService.show();
+
     if (isPlatformBrowser(this.platformId)) {
       window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY;
@@ -99,7 +91,14 @@ export class AppComponent implements OnInit {
       });
     }
 
-    this.carregando = false;
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+
+     setTimeout(() => this.loaderService.hide(), 2000);
   }
 
   /**

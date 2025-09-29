@@ -6,6 +6,6 @@ export const routes: Routes = [
   {
     path: SegmentoRotas.HOME,
     pathMatch: 'full',
-    loadComponent: () => import('./pages/templates/home/home.component').then(c => c.default)
+    redirectTo: ''
   }
 ];

@@ -3,15 +3,13 @@ import { MpcCardEventoComponent, MpcTabsComponent, Tab } from 'mpc-lib-angular';
 
 interface Trabalho {
   titulo: string;
-  mesEntrada: string;
-  anoEntrada: string;
+  periodo: string;
   empresa: string;
   atividades: string[];
 }
 
 @Component({
   selector: 'carreira',
-  standalone: true,
   imports: [MpcCardEventoComponent, MpcTabsComponent],
   templateUrl: './carreira.component.html',
   styleUrls: ['./carreira.component.scss']
@@ -45,8 +43,7 @@ export class CarreiraComponent {
     this.trabalhos = [
       {
         titulo: 'Estágio',
-        mesEntrada: 'JAN',
-        anoEntrada: '2019',
+        periodo: '2019 - 2021',
         empresa: 'Secretaria de Desenvolvimento Econômico e Emprego - SEDEM',
         atividades: [
           'Suporte de Hardware e Software',
@@ -56,8 +53,7 @@ export class CarreiraComponent {
       },
       {
         titulo: 'Desenvolvedor Back-End',
-        mesEntrada: 'MAR',
-        anoEntrada: '2021',
+        periodo: 'Março, 2021 - Outubro, 2021',
         empresa: 'Eco Açú Tecnologia',
         atividades: [
           'Desenvolvimento e Manutenção de Sistemas de Administração Pública',
@@ -67,8 +63,7 @@ export class CarreiraComponent {
       },
       {
         titulo: 'Desenvolvedor Fullstack',
-        mesEntrada: 'NOV',
-        anoEntrada: '2021',
+        periodo: 'Novembro, 2021 - Setembro, 2025',
         empresa: 'Capgemini Brasil S/A',
         atividades: [
           'Desenvolvimento e Manutenção de Sistemas Bradesco (Pix, Open Finance e Recarga de Celular)',
@@ -78,8 +73,7 @@ export class CarreiraComponent {
       },
       {
         titulo: 'Desenvolvedor Fullstack',
-        mesEntrada: 'OUT',
-        anoEntrada: '2025',
+        periodo: 'Outubro, 2025 - Atualmente',
         empresa: 'NAVA',
         atividades: [
           'Desenvolvimento e Manutenção de Sistemas Bradesco (Bradesco Seguros)',

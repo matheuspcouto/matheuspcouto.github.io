@@ -8,14 +8,15 @@
 
     <div class="row">
       <div class="col-lg-4" data-aos="fade-right">
-        <img src="assets/img/perfil.jpg" class="img-fluid rounded-lg">
+        <img src="assets/img/Perfil.png" class="img-fluid rounded-lg">
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
         <h3>Matheus Pimentel Do Couto</h3>
         <p>
           Eu sou um desenvolvedor Fullstack com bacharelado em Sistemas de Informação. Minha paixão pela tecnologia
-          me levou a atuar principalmente com as stacks Java e Angular nos últimos 3 anos, colaborando em projetos
-          de grande escala no setor bancário e financeiro, como sistemas de Pix, Open Finance, Recargas de celular e
+          me levou a atuar principalmente com as stacks Java e Angular nos últimos 4 anos, colaborando em projetos
+          de grande escala no setor bancário e financeiro, como sistemas de Pix, Seguros, Open Finance, Recargas de
+          celular e
           Arrecadação de Administração Pública. Com minhas habilidades comunicativas, criativas e organizacionais,
           estou sempre em busca de soluções inovadoras e eficazes para os desafios que encontro em cada projeto.
         </p>
@@ -34,16 +35,24 @@
         <div class="row">
           <div class="col-lg-6">
             <ul>
-              <li><i class="icofont-rounded-right"></i> <strong>Data de Nascimento:</strong> 23/05/2000
+              <li><i class="bi bi-arrow-right-short"></i> <strong>Data de Nascimento:</strong> 23/05/2000
               </li>
-              <li><i class="icofont-rounded-right"></i> <strong>Moro em:</strong> Palmas - Tocantins</li>
-              <li><i class="icofont-rounded-right"></i> <strong>Idade:</strong> {{ age }}</li>
-              <li><i class="icofont-rounded-right"></i> <strong>Nascido em:</strong> Belém - Pará</li>
+              <li><i class="bi bi-arrow-right-short"></i> <strong>Moro em:</strong> Palmas - Tocantins</li>
+              <li><i class="bi bi-arrow-right-short"></i> <strong>Idade:</strong> {{ age }}</li>
+              <li><i class="bi bi-arrow-right-short"></i> <strong>Natural de:</strong> Belém - Pará</li>
             </ul>
           </div>
         </div>
+        <div class="buttons">
+          <mpc-button class="btn-curriculo" (click)="verCurriculoPT()" texto="Currículo | PT-BR"
+            icone="bi bi-file-earmark-text" posicaoIcone="esquerda" />
+
+          <mpc-button class="btn-curriculo" (click)="verCurriculoEN()" texto="Currículo | EN-US"
+            icone="bi bi-file-earmark-text" posicaoIcone="esquerda" />
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 <!-- End Sobre Section -->

@@ -8,7 +8,6 @@ interface Habilidade {
 
 @Component({
   selector: 'habilidades',
-  standalone: true,
   imports: [],
   templateUrl: './habilidades.component.html',
   styleUrls: ['./habilidades.component.scss']
@@ -51,32 +50,32 @@ export class HabilidadesComponent {
     this.habilidades = [
       {
         titulo: 'Back-End',
-        icone: 'bx bx-code-curly',
+        icone: 'bi bi-braces',
         itens: BACK_END,
       },
       {
         titulo: 'Front-End',
-        icone: 'bx bx-code-alt',
+        icone: 'bi bi-code-slash',
         itens: FRONT_END,
       },
       {
         titulo: 'Banco de Dados',
-        icone: 'bx bx-data',
+        icone: 'bi bi-database',
         itens: BANCO_DADOS,
       },
       {
         titulo: 'Testes',
-        icone: 'bx bx-wrench',
+        icone: 'bi bi-tools',
         itens: TESTES,
       },
       {
         titulo: 'DevOps & Agile',
-        icone: 'bx bxl-git',
+        icone: 'bi bi-git',
         itens: DEVOPS,
       },
       {
         titulo: 'Idiomas',
-        icone: 'icofont-globe',
+        icone: 'bi bi-globe',
         itens: ['Inglês - Intermediário (B1)'],
       },
     ];

@@ -1,32 +1,13 @@
-@if (!carregando) {
+<mpc-navbar id="navbar" [abas]="abas" logo="/assets/img/Perfil.png" />
 
-<mpc-navbar id="navbar" [abas]="abas" logo="/assets/img/logo.png" />
-
-<!-- <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container text-lg-center" data-aos="fade-in">
-      <h3><span class="typed" data-typed-items="Hello World !"></span></h3>
-      <h1>Bem vindo(a) ao</h1>
-      <h1>meu Portfólio.</h1>
-    </div>
-  </section> -->
-
-<!-- ======= Page Header Home ======= -->
-<mpc-page-header-home imagemFundo="/assets/img/mountain.jpg">
-  <div content>
-    <h3><span class="typed" data-typed-items="Hello World !"></span></h3>
-    <h1>Bem vindo(a) ao</h1>
-    <h1>meu Portfólio.</h1>
-  </div>
-</mpc-page-header-home>
-<!-- ======= End Page Header Home ======= -->
-
-<main id="main">
-  <sobre></sobre>
-  <habilidades></habilidades>
-  <certificacoes></certificacoes>
-  <artigos></artigos>
-  <carreira></carreira>
-  <projetos></projetos>
+<main>
+  <page-header />
+  <sobre />
+  <habilidades />
+  <certificacoes />
+  <artigos />
+  <carreira />
+  <projetos />
 </main>
 
 <mpc-footer />
@@ -34,8 +15,5 @@
 @if (showScrollTop) {
 <mpc-btn-float id="btn-scroll-top" icone="bi bi-arrow-up-short" (click)="scrollToTop()" />
 }
-}
 
-@if (carregando) {
 <mpc-loader id="loader-exemplo" />
-}

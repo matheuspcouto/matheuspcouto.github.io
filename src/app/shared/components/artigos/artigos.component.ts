@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MpcCardMenuComponent } from 'mpc-lib-angular';
 
 interface Artigo {
   titulo: string;
@@ -10,8 +11,7 @@ interface Artigo {
 
 @Component({
   selector: 'artigos',
-  standalone: true,
-  imports: [],
+  imports: [MpcCardMenuComponent],
   templateUrl: './artigos.component.html',
   styleUrls: ['./artigos.component.scss']
 })
@@ -33,5 +33,13 @@ export class ArtigosComponent {
         issn: 'ISSN: 2230-9926',
       },
     ];
+  }
+
+  /**
+   * Abre o link do artigo em uma nova aba.
+   * @param url URL do artigo.
+   */
+  protected irParaArtigo(url: string): void {
+    window.open(url, '_blank');
   }
 }
