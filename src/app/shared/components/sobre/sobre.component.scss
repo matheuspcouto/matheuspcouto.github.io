@@ -2,7 +2,7 @@
   h3 {
     font-weight: 700;
     font-size: 26px;
-    color: #173b6c;
+    color: var(--color-primary);
   }
 
   ul {
@@ -17,7 +17,7 @@
   ul i {
     font-size: 20px;
     padding-right: 2px;
-    color: #149ddd;
+    color: var(--color-secondary);
   }
 
   p {
