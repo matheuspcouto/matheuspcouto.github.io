@@ -46,43 +46,37 @@ export class CarreiraComponent {
 
     this.trabalhos = [
       {
-        titulo: 'Estágio',
-        periodo: '2019 - 2021',
-        empresa: 'Secretaria de Desenvolvimento Econômico e Emprego - SEDEM',
+        titulo: 'Recepcionista',
+        periodo: '2015 - 2016',
+        empresa: 'Medimagem - Clínica de Diagnóstico por Imagem',
         atividades: [
-          'Suporte de Hardware e Software',
-          'Administração de Alvarás para Empresas',
+          'Recepção de pacientes',
+          'Atendimento ao cliente',
           'Relatórios',
         ],
       },
       {
-        titulo: 'Desenvolvedor Back-End',
-        periodo: 'Março, 2021 - Outubro, 2021',
-        empresa: 'Eco Açú Tecnologia',
+        titulo: 'Assistente Administrativo (RH)',
+        periodo: '2020 - 2023',
+        empresa: 'Medcentro - Distribuidora de Produtos Farmacêuticos',
         atividades: [
-          'Desenvolvimento e Manutenção de Sistemas de Administração Pública',
-          'Gestão e Importação de Banco de Dados',
-          'Relatórios em Jasper',
+          'Formalidades de admissão e demissão',
+          'Documentação',
+          'Controle de processos',
+          'Planejamento de recursos humanos',
         ],
       },
       {
-        titulo: 'Desenvolvedor Fullstack',
-        periodo: 'Novembro, 2021 - Setembro, 2025',
-        empresa: 'Capgemini Brasil S/A',
+        titulo: 'Auxiliar de Gestão Pessoal (RH)',
+        periodo: '2023 - Atualmente',
+        empresa: 'Destaque do Norte',
         atividades: [
-          'Desenvolvimento e Manutenção de Sistemas Bradesco (Pix, Open Finance e Recarga de Celular)',
-          'Supervisão de desenvolvedores júnior',
-          'CI/CD',
-        ],
-      },
-      {
-        titulo: 'Desenvolvedor Fullstack',
-        periodo: 'Outubro, 2025 - Atualmente',
-        empresa: 'NAVA',
-        atividades: [
-          'Desenvolvimento e Manutenção de Sistemas Bradesco (Bradesco Seguros)',
-          'Supervisão de desenvolvedores júnior',
-          'CI/CD',
+          'Formalidades de admissão e demissão',
+          'Documentação',
+          'Controle de processos',
+          'Planejamento de recursos humanos',
+          'Treinamentos',
+
         ],
       },
     ];

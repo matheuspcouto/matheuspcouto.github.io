@@ -83,7 +83,7 @@ describe('AppComponent', () => {
     
     component['abrirWhatsApp']();
     
-    expect(openSpy).toHaveBeenCalledWith('https://wa.me/55639992014337', '_blank');
+    expect(openSpy).toHaveBeenCalledWith('https://wa.me/556392186293', '_blank');
   });
 
   describe('Cenários de plataforma server', () => {

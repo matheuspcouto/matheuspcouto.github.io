@@ -5,7 +5,7 @@ export enum SegmentoRotas {
   CERTIFICACOES = "certificacoes",
   ARTIGOS = "artigos",
   CARREIRA = "carreira",
-  PROJETOS = "projetos",
+  CONTATO = "contato",
 }
 
 export enum Rotas {
@@ -13,7 +13,6 @@ export enum Rotas {
   SOBRE = `/${SegmentoRotas.SOBRE}`,
   HABILIDADES = `/${SegmentoRotas.HABILIDADES}`,
   CERTIFICACOES = `/${SegmentoRotas.CERTIFICACOES}`,
-  ARTIGOS = `/${SegmentoRotas.ARTIGOS}`,
   CARREIRA = `/${SegmentoRotas.CARREIRA}`,
-  PROJETOS = `/${SegmentoRotas.PROJETOS}`,
+  CONTATO = `/${SegmentoRotas.CONTATO}`,
 }

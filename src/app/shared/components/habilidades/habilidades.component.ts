@@ -25,62 +25,32 @@ export class HabilidadesComponent {
   protected habilidades: Habilidade[] = [];
 
   constructor() {
-    const BACK_END = [
-      '> Java',
-      '- SpringBoot',
-      '- JSF | JPA',
-      '> NodeJS',
-      '- ExpressJS | TypeScript',
-    ];
-
-    const FRONT_END = [
-      '> HTML & CSS',
-      '> Bootstrap',
-      '> JavaScript',
-      '- Angular',
-    ];
-
-    const BANCO_DADOS = [
-      '> PostgreSQL',
-      '> SQL Server',
-      '> MySQL',
-      '> MongoDB',
-    ];
-
-    const DEVOPS = ['> Git', '- Github | Bitbucket', '> Jira, Confluence & Bamboo', '> Azure', '> SonarQube'];
-
-    const TESTES = ['> JUnit', '> Jest', '> Mockito', '> Postman', '> Json Server'];
 
     this.habilidades = [
       {
-        titulo: 'Back-End',
-        icone: 'bi bi-braces',
-        itens: BACK_END,
+        titulo: 'Marketing',
+        icone: 'bi bi-megaphone-fill',
+        itens: ['Redes Sociais', 'Comunicação Interna e Externa', 'Campanhas Publicitárias', 'Canva'],
       },
       {
-        titulo: 'Front-End',
-        icone: 'bi bi-code-slash',
-        itens: FRONT_END,
+        titulo: 'Administração',
+        icone: 'bi bi-briefcase-fill',
+        itens: ['Gestão de Projetos', 'Organização de Eventos', 'Controle Financeiro', 'Atendimento ao Cliente'],
       },
       {
-        titulo: 'Banco de Dados',
-        icone: 'bi bi-database',
-        itens: BANCO_DADOS,
+        titulo: 'Gestão de pessoas',
+        icone: 'bi bi-people-fill',
+        itens: ['Recrutamento e Seleção', 'Treinamento e Desenvolvimento', 'Avaliação de Desempenho'],
       },
       {
-        titulo: 'Testes',
-        icone: 'bi bi-tools',
-        itens: TESTES,
+        titulo: 'Treinamentos',
+        icone: 'bi bi-trophy-fill',
+        itens: ['Planejamento de Treinamentos', 'Execução de Treinamentos', 'Avaliação de Resultados'],
       },
       {
-        titulo: 'DevOps & Agile',
-        icone: 'bi bi-git',
-        itens: DEVOPS,
-      },
-      {
-        titulo: 'Idiomas',
-        icone: 'bi bi-globe',
-        itens: ['Inglês - Intermediário (B1)'],
+        titulo: 'Planejamento Estratégico',
+        icone: 'bi bi-graph-up-arrow',
+        itens: ['Análise de Cenários', 'Definição de Metas', 'Monitoramento de Resultados'],
       },
     ];
   }

@@ -1,8 +1,15 @@
 .sobre {
+
+  img {
+    border: 2px solid var(--color-secondary);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   h3 {
     font-weight: 700;
     font-size: 26px;
-    color: #173b6c;
+    color: var(--color-primary);
   }
 
   ul {
@@ -17,7 +24,7 @@
   ul i {
     font-size: 20px;
     padding-right: 2px;
-    color: #149ddd;
+    color: var(--color-primary);
   }
 
   p {
@@ -36,9 +43,10 @@
     gap: 10px;
 
     .btn-curriculo {
-      --mpc-bg-color-btn: var(--color-secondary);
+      --mpc-bg-color-btn: var(--color-primary);
       --mpc-text-color-btn: white;
-      --mpc-bg-color-btn-hover: var(--color-primary);
+      --mpc-bg-color-btn-hover: white;
+      --mpc-text-color-btn-hover: var(--color-primary);
     }
 
     @media screen and (max-width: 991.98px) {

@@ -1,5 +1,4 @@
 .habilidades {
-  background-color: var(--color-tertiary);
 
   .content {
     padding: 1rem;
@@ -8,7 +7,7 @@
     i {
       display: block;
       font-size: 44px;
-      color: var(--color-secondary);
+      color: var(--color-primary);
       float: left;
     }
 
@@ -17,6 +16,7 @@
       display: block;
       font-weight: 700;
       margin-left: 60px;
+      color: var(--color-tertiary);
     }
 
     p {
@@ -24,6 +24,7 @@
       padding: 15px 0 0 0;
       margin: 0 0 0 60px;
       font-size: 16px;
+      color: var(--color-tertiary);
     }
   }
 }

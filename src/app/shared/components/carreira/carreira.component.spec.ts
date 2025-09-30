@@ -44,19 +44,4 @@ describe('CarreiraComponent', () => {
     expect(trabalho.atividades).toBeDefined();
     expect(Array.isArray(trabalho.atividades)).toBe(true);
   });
-
-  it('deve ter pelo menos um trabalho na Capgemini', () => {
-    const trabalhoCapgemini = component['trabalhos'].find(trabalho => 
-      trabalho.empresa.toLowerCase().includes('capgemini')
-    );
-    expect(trabalhoCapgemini).toBeDefined();
-  });
-
-  it('deve ter trabalho mais recente na NAVA', () => {
-    const trabalhoNava = component['trabalhos'].find(trabalho => 
-      trabalho.empresa.toLowerCase().includes('nava')
-    );
-    expect(trabalhoNava).toBeDefined();
-    expect(trabalhoNava?.periodo).toContain('Atualmente');
-  });
 });

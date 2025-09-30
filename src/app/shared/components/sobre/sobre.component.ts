@@ -20,7 +20,7 @@ export class SobreComponent {
    */
   constructor() {
     const now = new Date();
-    const dataNasc = new Date('2000-05-23');
+    const dataNasc = new Date('1998-10-13');
     const mes = now.getMonth() - dataNasc.getMonth();
     this.age = now.getFullYear() - dataNasc.getFullYear();
 
@@ -33,13 +33,6 @@ export class SobreComponent {
    * Abre o currículo em português em uma nova aba.
    */
   protected verCurriculoPT(): void {
-    window.open('https://www.canva.com/design/DAF-pR8ynQw/2daYc25BT31YuFiDKvtJjw/view', '_blank');
-  }
-
-  /**
-   * Abre o currículo em inglês em uma nova aba.
-   */
-  protected verCurriculoEN(): void {
-    window.open('https://www.canva.com/design/DAF-pdf-9Es/GB2dltpM5DV3zNJbiT4w6A/view', '_blank');
+    window.open('https://www.canva.com/design/DAGNTsZF9ZA/SlHnN155fRL0kkNLUhE2Xw/view', '_blank');
   }
 }

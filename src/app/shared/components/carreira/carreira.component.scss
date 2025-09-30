@@ -1,10 +1,9 @@
 .carreira {
   mpc-tabs {
-    --mpc-color-text-tabs: var(--color-primary);
-    --mpc-color-text-active-tabs: var(--color-primary);
-    --mpc-color-border-tabs: var(--color-primary);
-    --mpc-color-border-active-tabs: var(--color-secondary);
-    --mpc-font-tabs: var(--font-subtitle);
+    --mpc-color-text-tabs: var(--color-secondary);
+    --mpc-color-text-active-tabs: var(--color-tertiary);
+    --mpc-color-border-tabs: var(--color-secondary);
+    --mpc-color-border-active-tabs: var(--color-primary);
   }
 
   mpc-card-evento {
@@ -23,7 +22,6 @@
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 0;
-      font-family: var(--font-title);
       color: var(--color-primary);
       text-transform: uppercase;
     }
@@ -32,8 +30,7 @@
       font-size: 16px;
       font-weight: 600;
       margin: 0.5rem 0;
-      font-family: var(--font-title);
-      color: var(--color-secondary);
+      color: var(--color-tertiary);
       text-transform: uppercase;
     }
 

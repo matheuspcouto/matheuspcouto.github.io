@@ -1,5 +1,5 @@
 /* Importação de fontes */
-@import url('https://fonts.cdnfonts.com/css/raleway-5');
+@import url('https://fonts.cdnfonts.com/css/brightwall');
 
 /* Importação de bootstrap-icons */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
@@ -10,8 +10,8 @@
 
 * {
   /* Fontes do app */
-  --font-title: 'Raleway', sans-serif;
-  --font-default: "Poppins", sans-serif;
+  --font-title: 'Brightwall', sans-serif;
+  --font-default: "Inter", sans-serif;
   --font-subtitle: "Inter", sans-serif;
 
   /* Definição de fontes da mpc-lib-angular */
@@ -20,9 +20,9 @@
   --mpc-font-subtitle: var(--font-subtitle);
 
   /* Cores do app */
-  --color-primary: #0E2749;
-  --color-secondary: #149DDD;
-  --color-tertiary: #f5f8fd;
+  --color-primary: #8B4D27;
+  --color-secondary: #D0AF9C;
+  --color-tertiary: #181715;
 
   /* Definição de cores da mpc-lib-angular */
   --mpc-color-primary: var(--color-primary);
@@ -42,21 +42,9 @@
 }
 
 body {
-  font-family: var(--font-subtitle);
+  font-family: var(--font-default);
   color: var(--color-primary);
   overflow: auto !important;
-
-  @media screen and (min-width: 992px) {
-    main {
-      margin-top: 90px;
-    }
-  }
-
-  @media screen and (max-width: 991.98px) {
-    main {
-      margin-top: 70px;
-    }
-  }
 
   main {
     section {
@@ -72,7 +60,7 @@ body {
           margin-bottom: 20px;
           padding-bottom: 20px;
           position: relative;
-          color: #173b6c;
+          color: var(--color-tertiary);
 
           &::after {
             content: '';
@@ -80,7 +68,7 @@ body {
             display: block;
             width: 50px;
             height: 3px;
-            background: #149ddd;
+            background: var(--color-primary);
             bottom: 0;
             left: 0;
           }

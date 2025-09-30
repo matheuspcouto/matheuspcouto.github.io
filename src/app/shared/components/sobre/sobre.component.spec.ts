@@ -21,9 +21,9 @@ describe('SobreComponent', () => {
 
   it('deve calcular idade corretamente', () => {
     const agora = new Date();
-    const anoNascimento = 2000;
-    const mesNascimento = 4; // Maio (0-indexado)
-    const diaNascimento = 23;
+    const anoNascimento = 1998;
+    const mesNascimento = 9; // Outubro (0-indexado)
+    const diaNascimento = 13;
     
     let idadeEsperada = agora.getFullYear() - anoNascimento;
     
@@ -46,28 +46,16 @@ describe('SobreComponent', () => {
     component['verCurriculoPT']();
     
     expect(spy).toHaveBeenCalledWith(
-      'https://www.canva.com/design/DAF-pR8ynQw/2daYc25BT31YuFiDKvtJjw/view',
+      'https://www.canva.com/design/DAGNTsZF9ZA/SlHnN155fRL0kkNLUhE2Xw/view',
       '_blank'
     );
     spy.mockRestore();
   });
 
-  it('deve abrir currículo em inglês', () => {
-    const spy = jest.spyOn(window, 'open').mockImplementation(() => null);
-    
-    component['verCurriculoEN']();
-    
-    expect(spy).toHaveBeenCalledWith(
-      'https://www.canva.com/design/DAF-pdf-9Es/GB2dltpM5DV3zNJbiT4w6A/view',
-      '_blank'
-    );
-    spy.mockRestore();
-  });
-
-  it('deve calcular idade baseada na data de nascimento 23/05/2000', () => {
+  it('deve calcular idade baseada na data de nascimento 13/10/1998', () => {
     // Testando com diferentes datas para verificar o cálculo
     const hoje = new Date();
-    const nascimento = new Date('2000-05-23');
+    const nascimento = new Date('1998-10-13');
     
     let idadeCalculada = hoje.getFullYear() - nascimento.getFullYear();
     const mesAtual = hoje.getMonth();
@@ -79,5 +67,61 @@ describe('SobreComponent', () => {
     }
     
     expect(component['age']).toBe(idadeCalculada);
+  });
+
+  it('deve decrementar idade quando ainda não fez aniversário no ano', () => {
+    // Mock de uma data antes do aniversário (1 de janeiro)
+    const originalDate = Date;
+    const mockDate = jest.fn().mockImplementation((dateString?: string) => {
+      if (dateString) {
+        return new originalDate(dateString);
+      }
+      return new originalDate('2024-01-01');
+    });
+    
+    Object.setPrototypeOf(mockDate, originalDate);
+    Object.defineProperty(mockDate, 'prototype', {
+      value: originalDate.prototype,
+      writable: false
+    });
+    
+    global.Date = mockDate as any;
+
+    // Criar novo componente com a data mockada
+    const testComponent = new SobreComponent();
+    
+    // A idade deve ser 25 (2024 - 1998 - 1)
+    expect(testComponent['age']).toBe(25);
+    
+    // Restaurar Date original
+    global.Date = originalDate;
+  });
+
+  it('deve não decrementar idade quando já fez aniversário no ano', () => {
+    // Mock de uma data após o aniversário (15 de outubro)
+    const originalDate = Date;
+    const mockDate = jest.fn().mockImplementation((dateString?: string) => {
+      if (dateString) {
+        return new originalDate(dateString);
+      }
+      return new originalDate('2024-10-15');
+    });
+    
+    Object.setPrototypeOf(mockDate, originalDate);
+    Object.defineProperty(mockDate, 'prototype', {
+      value: originalDate.prototype,
+      writable: false
+    });
+    
+    global.Date = mockDate as any;
+
+    // Criar novo componente com a data mockada
+    const testComponent = new SobreComponent();
+    
+    // A idade deve ser 26 (2024 - 1998)
+    expect(testComponent['age']).toBe(26);
+    
+    // Restaurar Date original
+    global.Date = originalDate;
   });
 });

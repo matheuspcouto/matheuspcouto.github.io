@@ -1,24 +1,19 @@
 #navbar {
   /* Cores */
-  --mpc-color-bg-header: white;
-  --mpc-color-text-disabled: var(--color-primary);
-  --mpc-color-text-active: var(--color-primary);
-  --mpc-color-text-hover: var(--color-primary);
-  --mpc-color-border-active: var(--color-secondary);
+  --mpc-color-bg-header: var(--color-secondary);
+  --mpc-color-text-disabled: var(--color-tertiary);
+  --mpc-color-text-active: var(--color-tertiary);
+  --mpc-color-text-hover: var(--color-tertiary);
+  --mpc-color-border-active: var(--color-primary);
 
   /* Fontes */
-  --mpc-font-navbar: var(--font-subtitle);
+  --mpc-font-navbar: var(--font-default);
 }
 
 #loader-exemplo {
   /* Cores */
-  --mpc-bg-loader: white;
+  --mpc-bg-loader: var(--color-secondary);
   --mpc-color-loader: var(--color-primary);
-}
-
-#btn-scroll-top {
-  --mpc-btn-float-bg: var(--color-secondary);
-  --mpc-btn-float-color: white;
 }
 
 #btn-whatsapp {

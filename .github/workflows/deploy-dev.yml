@@ -7,7 +7,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
   NODE_VERSION: "20.x"
-  CUSTOM_URL: "develop-matheuspcouto-dev.vercel.app"
+  CUSTOM_URL: "develop-havylafsouza-rh.vercel.app"
 
 jobs:
   # Validação inicial e setup

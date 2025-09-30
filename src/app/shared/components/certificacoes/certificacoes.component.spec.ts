@@ -59,18 +59,4 @@ describe('CertificacoesComponent', () => {
     expect(spy).not.toHaveBeenCalled();
     spy.mockRestore();
   });
-
-  it('deve ter certificação de Java', () => {
-    const certificacaoJava = component['certificacoes'].find(cert => 
-      cert.titulo.toLowerCase().includes('java')
-    );
-    expect(certificacaoJava).toBeDefined();
-  });
-
-  it('deve ter certificação de Spring Framework', () => {
-    const certificacaoSpring = component['certificacoes'].find(cert => 
-      cert.titulo.toLowerCase().includes('spring')
-    );
-    expect(certificacaoSpring).toBeDefined();
-  });
 });
