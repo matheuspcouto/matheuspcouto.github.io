@@ -6,6 +6,7 @@ export enum SegmentoRotas {
   ARTIGOS = "artigos",
   CARREIRA = "carreira",
   PROJETOS = "projetos",
+  CONTATO = "contato"
 }
 
 export enum Rotas {
@@ -16,4 +17,5 @@ export enum Rotas {
   ARTIGOS = `/${SegmentoRotas.ARTIGOS}`,
   CARREIRA = `/${SegmentoRotas.CARREIRA}`,
   PROJETOS = `/${SegmentoRotas.PROJETOS}`,
+  CONTATO = `/${SegmentoRotas.CONTATO}`
 }

@@ -12,6 +12,7 @@ import { MpcBtnFloatComponent, MpcLoaderComponent, NavbarConfig, MpcNavbarCompon
 import AOS from 'aos';
 import { Rotas } from './shared/enums/rotas-enum';
 import { MpcFooterComponent } from './shared/components/mpc-footer/mpc-footer.component';
+import { ContatoComponent } from './shared/components/contato/contato.component';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { MpcFooterComponent } from './shared/components/mpc-footer/mpc-footer.co
     ArtigosComponent,
     CarreiraComponent,
     ProjetosComponent,
+    ContatoComponent,
     MpcNavbarComponent,
     MpcFooterComponent,
     MpcLoaderComponent,
@@ -62,6 +64,7 @@ export class AppComponent implements OnInit {
     { id: 'artigos', titulo: 'Artigos', rota: Rotas.ARTIGOS, icone: 'bi bi-journal-text' },
     { id: 'carreira', titulo: 'Carreira', rota: Rotas.CARREIRA, icone: 'bi bi-briefcase-fill' },
     { id: 'projetos', titulo: 'Projetos', rota: Rotas.PROJETOS, icone: 'bi bi-folder-fill' },
+    { id: 'contato', titulo: 'Contato', rota: Rotas.CONTATO, icone: 'bi bi-envelope-fill' }
   ];
 
   /**

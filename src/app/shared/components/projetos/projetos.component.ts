@@ -33,6 +33,8 @@ export class ProjetosComponent {
         titulo: 'Site IMEP',
         descricao: 'Site institucional da Igreja Metodista em Palmas, desenvolvido em Angular,\ncom o objetivo de apresentar a igreja, seus ministérios e eventos.\nO site conta com um painel administrativo para gerenciamento de conteúdo,\ne foi construído com um pipeline de CI/CD através do Github Actions.\nUma solução completa para comunicação digital da instituição religiosa.',
         tecnologias: [
+          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
@@ -43,6 +45,8 @@ export class ProjetosComponent {
         titulo: 'Portfólio - Matheus Pimentel',
         descricao: 'Meu portfólio tem o objetivo de destacar minha trajetória profissional e formação ao longo dos anos.\nApresento com orgulho os projetos em que trabalhei e as tecnologias utilizadas.\nPor meio dele, busco transmitir minha paixão pela área de tecnologia\ne minha dedicação em criar soluções inovadoras e impactantes.',
         tecnologias: [
+          'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+          'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
           'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
@@ -55,10 +59,10 @@ export class ProjetosComponent {
         tecnologias: [
           'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
           'https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white',
-          'https://img.shields.io/badge/Javascript-yellow?style=for-the-badge&logo=Javascript&logoColor=white',
+          'https://img.shields.io/badge/Angular-6A0000?style=for-the-badge&logo=Angular&logoColor=white',
           'https://img.shields.io/badge/Github-black?style=for-the-badge&logo=Github&logoColor=white',
         ],
-        url: 'https://matheuspcouto.dev/portfolio-havyla',
+        url: 'https://havylafsouza-rh.vercel.app/',
         imagem: 'assets/img/projetos/havyla.png',
       },
       /* {

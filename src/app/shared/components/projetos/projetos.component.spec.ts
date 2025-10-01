@@ -47,7 +47,7 @@ describe('ProjetosComponent', () => {
       p.titulo.toLowerCase().includes('portfólio')
     );
     expect(portfolio).toBeDefined();
-    expect(portfolio?.url).toContain('matheuspcouto.dev');
+    expect(portfolio?.url).toContain('matheuspcouto-dev');
   });
 
   it('deve ter projeto IrrIot', () => {
